@@ -273,6 +273,37 @@ class MockLLMClient(LLMClient):
             "너는 누구야": "저는 다양한 작업을 지원하도록 설계된 AI 언어 모델입니다."
         }
         
+        # 양자역학 교육용 소프트웨어 개발에 대한 역할별 응답
+        self.quantum_education_responses = {
+            "UI/UX Designer": [
+                "양자역학 개념은 복잡하니까 시각화 도구가 중요해요. 사용자가 직관적으로 이해할 수 있게 인터페이스를 단순화해야 해요.",
+                "학생들의 연령대별로 다른 UI가 필요할 것 같아요. 고등학생과 대학생용 모드를 따로 만들면 어떨까요?",
+                "게이미피케이션 요소를 추가하면 학습 동기 부여에 도움이 될 것 같아요. 퀴즈나 도전 과제 같은 기능은 어떨까요?",
+                "인터랙티브 시각화가 핵심이에요. 사용자가 직접 파라미터를 조정하면서 결과를 볼 수 있어야 해요.",
+                "접근성도 고려해야 해요. 색맹이나 다른 장애가 있는 학생들도 사용할 수 있어야 하니까요.",
+                "모바일 환경도 지원하면 좋겠어요. 학생들이 이동 중에도 학습할 수 있으니까요.",
+                "사용자 피드백을 수집하는 기능도 필요해요. 어떤 부분이 이해하기 어려운지 데이터를 모을 수 있으면 좋겠어요."
+            ],
+            "DevOps Engineer": [
+                "이런 교육용 소프트웨어는 학교 컴퓨터실 환경에서도 잘 돌아가야 해요. 시스템 요구사항을 최소화하는 게 중요해요.",
+                "클라우드 기반으로 구축하면 업데이트와 배포가 쉬워질 거예요. 학교마다 설치 과정이 복잡하면 사용률이 떨어질 수 있어요.",
+                "오프라인 모드도 지원해야 할 것 같아요. 인터넷 연결이 불안정한 환경도 고려해야죠.",
+                "자동화된 테스트 환경이 필요해요. 새 기능을 추가할 때마다 기존 기능이 망가지지 않도록 해야죠.",
+                "컨테이너화를 고려해보세요. Docker로 패키징하면 다양한 환경에서 일관되게 실행할 수 있어요.",
+                "모니터링 시스템도 구축해야 해요. 사용자가 많아지면 성능 이슈가 생길 수 있으니까요.",
+                "백업 및 복구 시스템도 중요해요. 학생들의 학습 데이터가 손실되지 않도록 해야죠."
+            ],
+            "Technical Architect / Lead Developer": [
+                "양자역학 시뮬레이션은 계산량이 많아서 성능 최적화가 중요해요. 복잡한 계산은 서버 측에서 처리하는 구조가 좋겠어요.",
+                "모듈식 설계가 필요해요. 기초 개념부터 고급 내용까지 단계별로 확장할 수 있는 구조로 만들어야 해요.",
+                "오픈소스 라이브러리를 활용하면 개발 시간을 단축할 수 있을 거예요. Python의 QuTiP 같은 라이브러리가 도움될 것 같아요.",
+                "마이크로서비스 아키텍처를 고려해볼 만해요. 기능별로 분리하면 확장성이 좋아질 거예요.",
+                "데이터베이스 설계도 중요해요. 학습 데이터를 효율적으로 저장하고 분석할 수 있어야 해요.",
+                "API 설계를 표준화하면 좋겠어요. 나중에 모바일 앱이나 다른 시스템과 연동하기 쉬워질 거예요.",
+                "보안 아키텍처도 초기부터 고려해야 해요. 학생 데이터를 안전하게 보호할 수 있어야 하니까요."
+            ]
+        }
+        
         # Role-specific responses for testing
         self.role_responses = {
             "Software Engineer": {
@@ -331,6 +362,21 @@ class MockLLMClient(LLMClient):
         
         # Custom responses provided at initialization
         self.custom_responses = responses or {}
+        
+        # 대화 상태 추적을 위한 변수
+        self.role_turn_counts = {
+            "UI/UX Designer": 0,
+            "DevOps Engineer": 0,
+            "Technical Architect / Lead Developer": 0,
+            "Software Engineer": 0,
+            "Product Manager": 0,
+            "Data Scientist": 0,
+            "Security Specialist": 0,
+            "QA Engineer": 0,
+            "Technical Writer": 0,
+            "Project Manager": 0,
+            "Business Analyst": 0
+        }
     
     def generate_response(self, prompt: str, max_tokens: int = 512, temperature: float = 0.7) -> str:
         """
@@ -339,12 +385,32 @@ class MockLLMClient(LLMClient):
         # Detect language
         language = self.detect_language(prompt)
         
-        # Check for role-specific prompts
-        for role, responses in self.role_responses.items():
+        # Extract role from prompt
+        role_match = None
+        for role in self.role_responses.keys():
             if role.lower() in prompt.lower():
-                if language == 'ko' and "기본" in responses:
-                    return responses["기본"]
-                return responses["default"]
+                role_match = role
+                break
+        
+        # 양자역학 교육용 소프트웨어 개발 주제 감지
+        is_quantum_education = "양자역학" in prompt and "교육" in prompt and "소프트웨어" in prompt
+        
+        # 역할이 있고 양자역학 교육 소프트웨어 주제인 경우
+        if role_match and is_quantum_education and role_match in self.quantum_education_responses:
+            # 해당 역할의 응답 목록에서 선택
+            responses = self.quantum_education_responses[role_match]
+            
+            # 프롬프트의 해시값을 기반으로 응답 선택 (같은 프롬프트에 대해 항상 다른 응답 반환)
+            # 이전 메시지 수를 추정하여 다른 응답 선택
+            message_count = prompt.count("[")
+            response_index = (hash(prompt) + message_count) % len(responses)
+            return responses[response_index]
+        
+        # Check for role-specific prompts
+        if role_match:
+            if language == 'ko' and "기본" in self.role_responses[role_match]:
+                return self.role_responses[role_match]["기본"]
+            return self.role_responses[role_match]["default"]
         
         # Check for consensus-related prompts
         if "consensus" in prompt.lower():

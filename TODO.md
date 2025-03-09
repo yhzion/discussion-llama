@@ -90,7 +90,12 @@ Discussion-Llama Architecture:
 - [ ][ ] Implement response diversity controls
 - [x][T] Create fallback mechanisms for low-quality responses
 - [ ][ ] Add self-correction capabilities
-- [ ][ ] Implement conversational style with shorter responses (natural dialogue)
+- [x][T] Implement conversational style with shorter responses (natural dialogue)
+  - [x][T] 간결한 구어체 스타일 프롬프트 추가 (Add concise conversational style prompts)
+  - [x][T] 자연스러운 대화 흐름 개선 (Improve natural conversation flow)
+  - [x][T] 역할별 다양한 응답 추가 (Add diverse responses for each role)
+  - [ ][ ] 대화 맥락에 따른 응답 생성 개선 (Improve context-aware response generation)
+  - [ ][ ] 감정 표현 및 공감 능력 추가 (Add emotional expression and empathy)
 
 ## 🖥️ User Interface
 
