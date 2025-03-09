@@ -201,4 +201,171 @@ def test_consensus_detector_with_topic_specific_detection():
     
     # Same messages but different topic should not necessarily show consensus
     consensus = detector.check_consensus(messages, "Overall system architecture")
-    assert consensus is False 
+    assert consensus is False
+
+
+def test_sentiment_analysis_for_consensus():
+    """Test that sentiment analysis is used to detect agreement/disagreement."""
+    # Create messages with clear sentiment indicators
+    messages = [
+        {"role": "role1", "content": "I strongly support using React for our frontend."},
+        {"role": "role2", "content": "React is definitely the right choice for our needs."},
+        {"role": "role3", "content": "I'm enthusiastic about using React for this project."},
+        {"role": "role4", "content": "While I have some concerns about the learning curve, I can see why React is a good fit."}
+    ]
+    
+    # Create a detector with sentiment analysis capability
+    mock_client = MockLLMClient()
+    detector = ConsensusDetector(mock_client)
+    
+    # Test that positive sentiment is detected as agreement
+    consensus = detector.check_consensus(messages, "Frontend framework selection")
+    assert consensus is True
+    
+    # Test with mixed sentiment
+    mixed_messages = [
+        {"role": "role1", "content": "I strongly support using React for our frontend."},
+        {"role": "role2", "content": "React is definitely the right choice for our needs."},
+        {"role": "role3", "content": "I'm not convinced React is the best option. Vue might be better."},
+        {"role": "role4", "content": "I'm skeptical about React. Angular has better enterprise support."}
+    ]
+    
+    consensus = detector.check_consensus(mixed_messages, "Frontend framework selection")
+    assert consensus is False
+
+
+def test_temporal_analysis_for_consensus():
+    """Test that temporal analysis tracks opinion changes over time."""
+    # Create a sequence of messages showing opinion evolution
+    messages = [
+        {"role": "role1", "content": "We should use a microservice architecture.", "timestamp": 1},
+        {"role": "role2", "content": "I prefer a monolithic approach.", "timestamp": 2},
+        {"role": "role1", "content": "After considering your points, a modular monolith might be better.", "timestamp": 3},
+        {"role": "role2", "content": "I agree that a modular monolith is a good compromise.", "timestamp": 4}
+    ]
+    
+    mock_client = MockLLMClient()
+    detector = ConsensusDetector(mock_client)
+    
+    # Test that later opinions are weighted more heavily
+    consensus = detector.check_consensus_with_temporal_analysis(messages, "Architecture decision")
+    assert consensus is True
+    
+    # Test with opinions that diverge over time
+    diverging_messages = [
+        {"role": "role1", "content": "We should use a microservice architecture.", "timestamp": 1},
+        {"role": "role2", "content": "I agree with using microservices.", "timestamp": 2},
+        {"role": "role1", "content": "On second thought, I'm concerned about the complexity of microservices.", "timestamp": 3},
+        {"role": "role2", "content": "I still believe microservices are the right approach.", "timestamp": 4}
+    ]
+    
+    consensus = detector.check_consensus_with_temporal_analysis(diverging_messages, "Architecture decision")
+    assert consensus is False
+
+
+def test_weighted_consensus_by_expertise():
+    """Test that consensus detection weights opinions based on role expertise."""
+    # Create messages with roles that have different expertise levels for the topic
+    messages = [
+        {"role": "Frontend Developer", "content": "We should use React for the frontend."},
+        {"role": "Backend Developer", "content": "I think Vue might be better, but I defer to frontend expertise."},
+        {"role": "DevOps Engineer", "content": "From a deployment perspective, either framework works."},
+        {"role": "UI Designer", "content": "React has better component libraries for our design system."}
+    ]
+    
+    # Create role expertise mapping
+    role_expertise = {
+        "Frontend Developer": {"frontend": 0.9, "backend": 0.3, "devops": 0.2, "design": 0.6},
+        "Backend Developer": {"frontend": 0.4, "backend": 0.9, "devops": 0.5, "design": 0.2},
+        "DevOps Engineer": {"frontend": 0.2, "backend": 0.5, "devops": 0.9, "design": 0.1},
+        "UI Designer": {"frontend": 0.7, "backend": 0.1, "devops": 0.1, "design": 0.9}
+    }
+    
+    mock_client = MockLLMClient()
+    detector = ConsensusDetector(mock_client)
+    
+    # Test that frontend-related consensus is detected with appropriate weighting
+    consensus = detector.check_consensus_with_expertise_weighting(messages, "Frontend framework selection", role_expertise)
+    assert consensus is True
+    
+    # Test with a backend topic where there's less consensus among experts
+    backend_messages = [
+        {"role": "Frontend Developer", "content": "I think we should use MongoDB for the database."},
+        {"role": "Backend Developer", "content": "PostgreSQL would be a better choice for our relational data."},
+        {"role": "DevOps Engineer", "content": "From an operations standpoint, PostgreSQL is more mature."},
+        {"role": "UI Designer", "content": "I don't have a strong opinion on database technology."}
+    ]
+    
+    consensus = detector.check_consensus_with_expertise_weighting(backend_messages, "Database selection", role_expertise)
+    assert consensus is False
+
+
+def test_improved_topic_relevance():
+    """Test improved detection of topic relevance in messages."""
+    # Create a detector with topic relevance capability
+    mock_client = MockLLMClient()
+    detector = ConsensusDetector(mock_client)
+    
+    # Test with on-topic messages
+    on_topic_messages = [
+        {"role": "role1", "content": "For user authentication, JWT with proper expiration is secure."},
+        {"role": "role2", "content": "I agree that JWT works well for authentication needs."},
+        {"role": "role3", "content": "JWT tokens should be stored securely and refreshed appropriately."},
+        {"role": "role4", "content": "We should implement proper JWT validation on the server side."}
+    ]
+    
+    topic_relevance = detector.calculate_topic_relevance(on_topic_messages, "Authentication mechanism")
+    assert topic_relevance > 0.8
+    
+    # Test with off-topic messages
+    off_topic_messages = [
+        {"role": "role1", "content": "The UI design looks great, I like the color scheme."},
+        {"role": "role2", "content": "We should optimize the database queries for better performance."},
+        {"role": "role3", "content": "The deployment pipeline needs improvement."},
+        {"role": "role4", "content": "We should consider adding more unit tests."}
+    ]
+    
+    topic_relevance = detector.calculate_topic_relevance(off_topic_messages, "Authentication mechanism")
+    assert topic_relevance < 0.3
+
+
+def test_consensus_confidence_scoring():
+    """Test that consensus detection includes a confidence score."""
+    mock_client = MockLLMClient()
+    detector = ConsensusDetector(mock_client)
+    
+    # Test with high-confidence consensus
+    high_confidence_messages = [
+        {"role": "role1", "content": "We should definitely use React for the frontend."},
+        {"role": "role2", "content": "React is absolutely the right choice for our needs."},
+        {"role": "role3", "content": "I strongly agree that React is the best option."},
+        {"role": "role4", "content": "React is clearly the way to go for this project."}
+    ]
+    
+    consensus, confidence = detector.check_consensus_with_confidence(high_confidence_messages, "Frontend framework")
+    assert consensus is True
+    assert confidence > 0.8
+    
+    # Test with low-confidence consensus
+    low_confidence_messages = [
+        {"role": "role1", "content": "I think React might be a good option, but I'm not entirely sure."},
+        {"role": "role2", "content": "React seems reasonable, though I haven't used it much."},
+        {"role": "role3", "content": "I'm leaning towards React, but I'm open to alternatives."},
+        {"role": "role4", "content": "React is probably fine, though we should consider other options too."}
+    ]
+    
+    consensus, confidence = detector.check_consensus_with_confidence(low_confidence_messages, "Frontend framework")
+    assert consensus is True
+    assert confidence < 0.6
+    
+    # Test with no consensus
+    no_consensus_messages = [
+        {"role": "role1", "content": "React would be my choice for the frontend."},
+        {"role": "role2", "content": "I strongly prefer Vue for its simplicity."},
+        {"role": "role3", "content": "Angular provides better structure for large applications."},
+        {"role": "role4", "content": "Svelte offers better performance and a smaller bundle size."}
+    ]
+    
+    consensus, confidence = detector.check_consensus_with_confidence(no_consensus_messages, "Frontend framework")
+    assert consensus is False
+    assert confidence > 0.7  # High confidence that there is NO consensus 
