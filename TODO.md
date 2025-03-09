@@ -182,7 +182,7 @@ Discussion-Llama Architecture:
 3. [x][T] Create Role class with all required attributes
 4. [x][T] Design basic discussion flow algorithm
 5. [x][T] Implement LLM client wrapper
-6. [ ][T] Improve LLM integration with real Ollama server
+6. [x][T] Improve LLM integration with real Ollama server
 7. [ ][T] Enhance consensus detection algorithm
 8. [ ][T] Optimize role selection algorithm
 9. [ ][ ] Develop web interface (optional)

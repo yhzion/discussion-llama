@@ -72,12 +72,26 @@ def group_similar_points(points: List[str]) -> List[List[str]]:
     return groups
 
 
-def check_consensus_rule_based(messages: List[Dict[str, Any]], threshold: float = 0.7) -> bool:
+def check_consensus_rule_based(messages: List[Dict[str, Any]], topic: str, threshold: float = 0.7) -> bool:
     """
     Check for consensus using a rule-based approach.
+    
+    Args:
+        messages: List of message dictionaries with 'role' and 'content' keys
+        topic: The discussion topic
+        threshold: Threshold for agreement ratio (0.0 to 1.0)
+        
+    Returns:
+        True if consensus is detected, False otherwise
     """
     if len(messages) < 4:  # Need at least a few messages to detect consensus
         return False
+    
+    # Ensure threshold is a float
+    try:
+        threshold = float(threshold)
+    except (ValueError, TypeError):
+        threshold = 0.7  # Default to 0.7 if conversion fails
     
     # 합의 키워드 찾기
     consensus_keywords = [
@@ -152,7 +166,7 @@ class ConsensusDetector:
         Check if consensus has been reached in the discussion.
         """
         # First try rule-based approach
-        rule_based_result = check_consensus_rule_based(messages)
+        rule_based_result = check_consensus_rule_based(messages, topic)
         
         # If we have an LLM client and rule-based approach is inconclusive,
         # use the LLM for a more sophisticated check

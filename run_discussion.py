@@ -18,9 +18,14 @@ def main():
     parser.add_argument("--roles", help="Comma-separated list of role names to include")
     parser.add_argument("--num-roles", type=int, default=3, help="Number of roles to include (if not specified)")
     parser.add_argument("--max-turns", type=int, default=10, help="Maximum number of turns")
-    parser.add_argument("--llm-client", default="mock", choices=["mock", "ollama"], help="LLM client to use")
+    parser.add_argument("--llm-client", default="mock", choices=["mock", "ollama", "enhanced_ollama"], 
+                        help="LLM client to use")
     parser.add_argument("--model", default="llama2:7b-chat-q4_0", help="Model to use (for Ollama)")
+    parser.add_argument("--max-retries", type=int, default=3, help="Maximum number of retries for LLM requests")
+    parser.add_argument("--retry-delay", type=float, default=1.0, help="Delay between retries for LLM requests")
+    parser.add_argument("--timeout", type=int, default=30, help="Timeout for LLM requests in seconds")
     parser.add_argument("--output", help="Output file for discussion results (JSON)")
+    parser.add_argument("--stream", action="store_true", help="Use streaming for response generation (enhanced_ollama only)")
     args = parser.parse_args()
     
     # 역할 디렉토리 경로
@@ -57,7 +62,17 @@ def main():
     print("-" * 80)
     
     # LLM 클라이언트 생성
-    llm_client = create_llm_client(args.llm_client, model=args.model)
+    llm_kwargs = {"model": args.model}
+    
+    # Add enhanced_ollama specific parameters
+    if args.llm_client == "enhanced_ollama":
+        llm_kwargs.update({
+            "max_retries": args.max_retries,
+            "retry_delay": args.retry_delay,
+            "timeout": args.timeout
+        })
+    
+    llm_client = create_llm_client(args.llm_client, **llm_kwargs)
     
     # 합의 감지기 생성
     consensus_detector = ConsensusDetector(llm_client)
@@ -69,6 +84,9 @@ def main():
     # LLM 클라이언트를 DiscussionEngine에 전달
     engine = DiscussionEngine(args.topic, selected_roles, state_dir, llm_client=llm_client)
     engine.max_turns = args.max_turns
+    
+    # 스트리밍 옵션 설정
+    engine.use_streaming = args.stream and args.llm_client == "enhanced_ollama"
     
     # 토론 실행
     result = engine.run_discussion()

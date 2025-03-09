@@ -1,6 +1,8 @@
 import requests
-from typing import Dict, Any, Optional, List
+from typing import Dict, Any, Optional, List, Callable
 import re
+import time
+import json
 
 
 class LLMClient:
@@ -54,6 +56,152 @@ class OllamaClient(LLMClient):
                 return f"Error: {response.status_code}, {response.text}"
         except Exception as e:
             return f"Error generating response: {str(e)}"
+
+
+class EnhancedOllamaClient(OllamaClient):
+    """
+    Enhanced client for interacting with Ollama LLMs.
+    Includes retry mechanism, streaming support, and better error handling.
+    """
+    def __init__(
+        self, 
+        model: str = "llama2:7b-chat-q4_0", 
+        api_url: str = "http://localhost:11434",
+        max_retries: int = 3,
+        retry_delay: float = 1.0,
+        timeout: int = 30
+    ):
+        super().__init__(model, api_url)
+        self.max_retries = max_retries
+        self.retry_delay = retry_delay
+        self.timeout = timeout
+    
+    def generate_response(self, prompt: str, max_tokens: int = 512, temperature: float = 0.7) -> str:
+        """
+        Generate a response from Ollama with retry mechanism.
+        """
+        retries = 0
+        while True:
+            try:
+                response = requests.post(
+                    f"{self.api_url}/api/generate",
+                    json={
+                        "model": self.model,
+                        "prompt": prompt,
+                        "stream": False,
+                        "options": {
+                            "num_predict": max_tokens,
+                            "temperature": temperature,
+                            "top_p": 0.9,
+                            "context_size": 2048  # Context size limit
+                        }
+                    },
+                    timeout=self.timeout
+                )
+                
+                if response.status_code == 200:
+                    return response.json()["response"]
+                elif response.status_code == 429:  # Rate limit
+                    if retries < self.max_retries:
+                        wait_time = self.retry_delay * (2 ** retries)  # Exponential backoff
+                        time.sleep(wait_time)
+                        retries += 1
+                        continue
+                    else:
+                        return f"Error: {response.status_code}, {response.text}"
+                else:
+                    if retries < self.max_retries:
+                        time.sleep(self.retry_delay)
+                        retries += 1
+                        continue
+                    else:
+                        return f"Error: {response.status_code}, {response.text}"
+            
+            except requests.exceptions.Timeout:
+                if retries < self.max_retries:
+                    time.sleep(self.retry_delay)
+                    retries += 1
+                    continue
+                else:
+                    return f"Error generating response: Request timed out after {self.timeout} seconds"
+            
+            except requests.exceptions.ConnectionError as e:
+                if retries < self.max_retries:
+                    time.sleep(self.retry_delay)
+                    retries += 1
+                    continue
+                else:
+                    return f"Error generating response: Connection error - {str(e)}"
+            
+            except Exception as e:
+                if retries < self.max_retries:
+                    time.sleep(self.retry_delay)
+                    retries += 1
+                    continue
+                else:
+                    return f"Error generating response: {str(e)}"
+    
+    def generate_streaming_response(
+        self, 
+        prompt: str, 
+        max_tokens: int = 512, 
+        temperature: float = 0.7,
+        callback: Optional[Callable[[str], None]] = None
+    ) -> str:
+        """
+        Generate a streaming response from Ollama.
+        
+        Args:
+            prompt: The prompt to send to the model
+            max_tokens: Maximum number of tokens to generate
+            temperature: Temperature for sampling
+            callback: Optional callback function that receives each chunk of text
+            
+        Returns:
+            The complete generated text
+        """
+        try:
+            response = requests.post(
+                f"{self.api_url}/api/generate",
+                json={
+                    "model": self.model,
+                    "prompt": prompt,
+                    "stream": True,
+                    "options": {
+                        "num_predict": max_tokens,
+                        "temperature": temperature,
+                        "top_p": 0.9,
+                        "context_size": 2048  # Context size limit
+                    }
+                },
+                timeout=self.timeout,
+                stream=True
+            )
+            
+            if response.status_code != 200:
+                return f"Error: {response.status_code}, {response.text}"
+            
+            # Process the streaming response
+            full_response = ""
+            for line in response.iter_lines():
+                if line:
+                    try:
+                        chunk_data = json.loads(line.decode('utf-8'))
+                        chunk_text = chunk_data.get("response", "")
+                        full_response += chunk_text
+                        
+                        if callback:
+                            callback(chunk_text)
+                        
+                        if chunk_data.get("done", False):
+                            break
+                    except json.JSONDecodeError:
+                        continue
+            
+            return full_response
+        
+        except Exception as e:
+            return f"Error generating streaming response: {str(e)}"
 
 
 class MockLLMClient(LLMClient):
@@ -255,11 +403,23 @@ We have found common ground that satisfies our security requirements, technical 
 
 def create_llm_client(client_type: str = "mock", **kwargs) -> LLMClient:
     """
-    Factory function to create an LLM client.
+    Create an LLM client based on the specified type.
+    
+    Args:
+        client_type: Type of client to create ("mock", "ollama", or "enhanced_ollama")
+        **kwargs: Additional arguments to pass to the client constructor
+        
+    Returns:
+        An instance of LLMClient
+        
+    Raises:
+        ValueError: If the client_type is not recognized
     """
-    if client_type == "ollama":
-        return OllamaClient(**kwargs)
-    elif client_type == "mock":
+    if client_type == "mock":
         return MockLLMClient(**kwargs)
+    elif client_type == "ollama":
+        return OllamaClient(**kwargs)
+    elif client_type == "enhanced_ollama":
+        return EnhancedOllamaClient(**kwargs)
     else:
-        raise ValueError(f"Unknown LLM client type: {client_type}") 
+        raise ValueError(f"Unknown client type: {client_type}") 
