@@ -9,10 +9,10 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).parent.parent
 
 # Path to the schema file
-SCHEMA_PATH = PROJECT_ROOT / "role" / "role_schema.json"
+SCHEMA_PATH = PROJECT_ROOT / "roles" / "role_schema.json"
 
 # Path to the role directory
-ROLE_DIR = PROJECT_ROOT / "role"
+ROLE_DIR = PROJECT_ROOT / "roles"
 
 def load_schema():
     """Load the JSON schema from the schema file."""
