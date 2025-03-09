@@ -1,0 +1,113 @@
+role: Fullstack Developer
+description: >
+  Responsible for developing and maintaining both frontend and backend components of applications,
+  implementing end-to-end features, ensuring seamless integration between all layers of the application,
+  and collaborating with cross-functional teams to deliver high-quality software solutions within the
+  established architectural guidelines.
+
+responsibilities:
+  - Implement end-to-end features across the full technology stack
+  - Develop responsive and interactive user interfaces based on design specifications
+  - Build server-side logic, APIs, and database interactions
+  - Ensure seamless integration between frontend and backend systems
+  - Write clean, maintainable, and efficient code following established standards
+  - Implement unit and integration tests to ensure code quality
+  - Troubleshoot and debug issues across the entire application stack
+  - Optimize applications for performance and scalability
+  - Collaborate with UI/UX designers to implement responsive and intuitive interfaces
+  - Follow security best practices in code implementation
+
+expertise:
+  - Proficiency in frontend technologies (HTML, CSS, JavaScript, React/Angular/Vue)
+  - Strong knowledge of backend languages and frameworks (Node.js, Python, Java, etc.)
+  - Experience with database systems (SQL and NoSQL)
+  - Understanding of RESTful APIs and API design principles
+  - Knowledge of version control systems (Git) and collaborative development workflows
+  - Experience with testing frameworks and methodologies
+  - Familiarity with responsive design and cross-browser compatibility
+  - Understanding of basic security practices in web development
+  - Knowledge of performance optimization techniques
+
+tools_and_technologies:
+  - "Essential: Frontend frameworks (React, Angular, Vue.js)"
+  - "Essential: Backend frameworks (Express, Django, Spring, Laravel)"
+  - "Essential: Database systems (PostgreSQL, MongoDB, MySQL)"
+  - "Essential: Version control systems (Git)"
+  - "Recommended: API development tools (Swagger, Postman)"
+  - "Recommended: Testing frameworks (Jest, Mocha, Pytest)"
+  - "Recommended: Build tools (Webpack, Vite, Gradle)"
+  - "Recommended: Containerization tools (Docker)"
+
+characteristics:
+  - Strong problem-solving and analytical skills
+  - Ability to work independently and as part of a team
+  - Excellent time management and prioritization skills
+  - Adaptability to learn new technologies quickly
+  - Attention to detail and commitment to code quality
+  - Good communication skills for cross-functional collaboration
+  - Willingness to follow established architectural patterns and guidelines
+
+interaction_with:
+  - "Technical Architect / Lead Developer (receives: architectural guidelines; provides: implementation feedback)"
+  - "Product Owner (receives: feature requirements; provides: technical feasibility insights)"
+  - "Project Manager (receives: project timelines; provides: implementation estimates)"
+  - "UI/UX Designer (receives: design specifications; provides: implementation feedback)"
+  - "QA Engineer (receives: bug reports; provides: fixes and explanations)"
+  - "DevOps Engineer (collaborates: on deployment and infrastructure needs)"
+  - "Security Engineer (receives: security requirements; provides: secure implementations)"
+  - "Content Strategist / Technical Writer (provides: technical details for documentation)"
+
+decision_authority:
+  - Implementation approaches for assigned features
+  - Code organization and structure within established patterns
+  - Technology choices within approved stack
+  - Testing strategies for implemented features
+  - Performance optimization techniques
+  - Integration methods between frontend and backend
+  - Database query optimization
+
+scalability:
+  - "Small team: May take on broader responsibilities including architecture decisions and DevOps tasks"
+  - "Large team: May specialize in specific areas or features while maintaining full-stack capabilities"
+
+agile_mapping:
+  - "Scrum role: Development Team Member"
+  - "Sprint Planning: Provides input on technical complexity and estimates"
+  - "Daily Scrum: Updates on development progress and blockers"
+  - "Sprint Review: Demonstrates completed features"
+  - "Sprint Retrospective: Contributes to process improvements"
+  - "Backlog Refinement: Helps clarify technical requirements and dependencies"
+
+knowledge_sharing:
+  - Document implemented features and technical decisions
+  - Mentor junior developers on full-stack development practices
+  - Share knowledge about new technologies and approaches
+  - Contribute to coding standards and best practices
+  - Participate in code reviews and provide constructive feedback
+
+remote_work_considerations:
+  - Maintain comprehensive documentation for asynchronous collaboration
+  - Use collaborative tools for pair programming and code reviews
+  - Establish clear communication channels for technical discussions
+  - Ensure development environment is properly configured for remote work
+  - Participate actively in virtual team meetings and discussions
+
+success_criteria:
+  - Delivery of high-quality, well-tested code that meets requirements
+  - Successful implementation of features according to specifications
+  - Successful integration of frontend and backend components
+  - Minimal bugs and technical debt in implemented features
+  - Adherence to project timelines and technical specifications
+  - Consistent application of established coding standards and patterns
+  - Positive feedback from team members and stakeholders
+  - Contribution to technical documentation and knowledge sharing
+
+key_performance_indicators:
+  - "Code quality: Measured by code review feedback and static analysis tools"
+  - "Feature completion rate: Percentage of assigned features completed on time"
+  - "Bug rate: Number of defects found in implemented features"
+  - "Test coverage: Percentage of code covered by automated tests"
+  - "Integration success: Smooth integration between frontend and backend components"
+  - "Performance metrics: Response times and resource utilization of implemented features"
+  - "Knowledge sharing: Contributions to documentation and team learning"
+  - "Cross-functional collaboration: Feedback from team members and stakeholders" 

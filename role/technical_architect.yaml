@@ -1,0 +1,115 @@
+role: Technical Architect / Lead Developer
+description: >
+  Responsible for making high-level technical decisions, designing system architecture,
+  establishing coding standards and best practices, guiding development teams, and ensuring
+  the technical vision aligns with business goals while maintaining scalability, performance,
+  and maintainability of the software.
+
+responsibilities:
+  - Design and establish the overall technical architecture of the system
+  - Make critical technical decisions and technology selections
+  - Define coding standards, patterns, and best practices
+  - Provide technical leadership and mentorship to development teams
+  - Review code and architecture to ensure quality and consistency
+  - Identify and mitigate technical risks and technical debt
+  - Collaborate with product owners to align technical vision with business goals
+  - Research and evaluate new technologies and approaches
+  - Ensure system scalability, performance, and security
+  - Create and maintain technical documentation for architecture
+
+expertise:
+  - Deep knowledge of software architecture patterns and principles
+  - Strong experience in relevant programming languages and frameworks
+  - Understanding of system design, APIs, and integration patterns
+  - Knowledge of cloud infrastructure and distributed systems
+  - Experience with performance optimization and scalability
+  - Familiarity with security best practices and compliance requirements
+  - Understanding of DevOps practices and CI/CD pipelines
+  - Experience with database design and data modeling
+
+tools_and_technologies:
+  - "Essential: Architecture modeling tools (C4 model, UML, ArchiMate)"
+  - "Essential: Version control systems (Git)"
+  - "Essential: Cloud platforms (AWS, Azure, GCP)"
+  - "Essential: API design tools (Swagger, OpenAPI)"
+  - "Recommended: Infrastructure as Code tools (Terraform, CloudFormation)"
+  - "Recommended: Monitoring and observability tools (Prometheus, Grafana, ELK)"
+  - "Recommended: Containerization and orchestration (Docker, Kubernetes)"
+  - "Recommended: CI/CD platforms (Jenkins, GitHub Actions, GitLab CI)"
+
+characteristics:
+  - Strong technical leadership and decision-making abilities
+  - Excellent communication skills to explain complex technical concepts
+  - Strategic thinking with ability to balance short-term needs and long-term vision
+  - Problem-solving mindset and analytical approach
+  - Collaborative attitude and ability to build consensus
+  - Continuous learning mindset to stay current with technology trends
+  - Ability to mentor and develop technical skills in others
+  - Pragmatic approach to technology selection and implementation
+
+interaction_with:
+  - "Product Owner / PM (receives: product vision and requirements; provides: technical feasibility and architectural guidance)"
+  - "Project Manager (provides: technical dependencies and constraints; receives: project timelines and resource allocation)"
+  - "Frontend Developer (provides: frontend architecture guidelines; receives: implementation feedback)"
+  - "Backend Developer (provides: backend architecture guidelines; receives: implementation feedback)"
+  - "Fullstack Developer (provides: architectural guidance; receives: cross-stack implementation insights)"
+  - "DevOps Engineer (collaborates: on infrastructure architecture and deployment strategies)"
+  - "Security Engineer (collaborates: on security architecture and compliance requirements)"
+  - "Data Engineer (collaborates: on data architecture and integration patterns)"
+  - "QA Engineer (provides: testability guidelines; receives: quality and performance feedback)"
+
+decision_authority:
+  - System architecture and design patterns
+  - Technology stack selection
+  - Technical standards and coding guidelines
+  - Architecture trade-offs and technical debt management
+  - Technical risk assessment and mitigation strategies
+  - Infrastructure and deployment architecture
+  - Performance and scalability approaches
+  - Integration patterns and API design
+
+scalability:
+  - "Small team: May be hands-on with development while providing architectural guidance"
+  - "Large team: Focuses primarily on architecture, standards, and mentoring multiple teams"
+
+agile_mapping:
+  - "Scrum role: Development Team Member / Technical Leader"
+  - "Sprint Planning: Provides architectural guidance and technical constraints"
+  - "Daily Scrum: Addresses architectural concerns and technical blockers"
+  - "Sprint Review: Evaluates technical implementation against architectural vision"
+  - "Sprint Retrospective: Identifies architectural improvements and technical process enhancements"
+  - "Backlog Refinement: Provides technical complexity assessment and architectural considerations"
+
+knowledge_sharing:
+  - Create and maintain architectural documentation and diagrams
+  - Conduct architecture review sessions and technical workshops
+  - Mentor developers on architectural principles and patterns
+  - Establish technical knowledge base and coding guidelines
+  - Share insights on technology trends and architectural innovations
+
+remote_work_considerations:
+  - Use collaborative architecture and diagramming tools
+  - Establish clear documentation practices for distributed teams
+  - Schedule regular architecture review sessions via video conferencing
+  - Create accessible technical decision records for asynchronous work
+  - Provide recorded technical presentations for team members in different time zones
+
+success_criteria:
+  - Scalable, maintainable, and robust system architecture
+  - Consistent implementation of architectural patterns and best practices
+  - Effective technical documentation and knowledge sharing
+  - Successful delivery of complex technical solutions
+  - Minimal technical debt and architectural issues
+  - Smooth collaboration between technical teams
+  - Timely resolution of architectural challenges
+  - Successful adoption of new technologies when appropriate
+
+key_performance_indicators:
+  - "Architecture quality: Measured by technical debt metrics and architecture reviews"
+  - "System performance: Response times, throughput, and resource utilization"
+  - "Scalability: System's ability to handle increased load"
+  - "Technical incident rate: Number of production issues related to architecture"
+  - "Developer productivity: Time to implement features within the architecture"
+  - "Architecture compliance: Adherence to defined architectural standards"
+  - "Knowledge sharing effectiveness: Team's understanding of architectural principles"
+  - "Innovation rate: Successful adoption of new technologies and approaches" 

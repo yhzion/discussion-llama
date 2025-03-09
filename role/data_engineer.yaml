@@ -1,0 +1,115 @@
+role: Data Engineer
+description: >
+  Responsible for designing, building, and maintaining data infrastructure and pipelines that transform
+  raw data into reliable, accessible formats, ensuring data quality, scalability, and security while
+  enabling data scientists, analysts, and other stakeholders to effectively utilize data for insights
+  and decision-making.
+
+responsibilities:
+  - Design, build, and optimize data pipelines for extraction, transformation, and loading (ETL)
+  - Develop and maintain data infrastructure, architecture, and storage solutions
+  - Implement and manage database systems and data warehouses
+  - Ensure data quality, integrity, and security across systems
+  - Implement data governance policies and procedures
+  - Create and maintain documentation for data systems and processes
+  - Build data ingestion mechanisms from various sources (APIs, databases, streams)
+  - Optimize database performance, query efficiency, and data access patterns
+  - Implement solutions for data storage, retrieval, and processing at scale
+  - Establish data monitoring, logging, and alerting systems
+
+expertise:
+  - Proficiency in SQL and database management systems (MySQL, PostgreSQL, etc.)
+  - Experience with big data technologies (Hadoop, Spark, Kafka, etc.)
+  - Knowledge of data warehousing solutions (Snowflake, Redshift, BigQuery, etc.)
+  - Programming skills in Python, Scala, or Java
+  - Understanding of ETL tools and frameworks (Airflow, Luigi, etc.)
+  - Experience with cloud platforms (AWS, Azure, GCP)
+  - Knowledge of data modeling and schema design
+  - Familiarity with version control systems and CI/CD for data pipelines
+  - Understanding of data security and compliance requirements
+
+tools_and_technologies:
+  - "Essential: Database systems (PostgreSQL, MySQL, MongoDB, Cassandra)"
+  - "Essential: ETL/ELT tools (Apache Airflow, dbt, Fivetran)"
+  - "Essential: Data warehousing (Snowflake, BigQuery, Redshift)"
+  - "Essential: Programming languages (Python, SQL, Scala)"
+  - "Recommended: Stream processing (Kafka, Spark Streaming, Flink)"
+  - "Recommended: Big data technologies (Hadoop, Spark, Hive)"
+  - "Recommended: Cloud data services (AWS S3, GCP BigTable, Azure Data Lake)"
+  - "Recommended: Data version control (DVC, Pachyderm, lakeFS)"
+
+characteristics:
+  - Strong analytical and problem-solving skills
+  - Attention to detail and commitment to data quality
+  - Systems thinking and architectural planning abilities
+  - Proactive approach to identifying and resolving data infrastructure issues
+  - Excellent communication skills for explaining technical concepts
+  - Adaptability to evolving data technologies and methodologies
+  - Collaborative mindset for cross-functional team work
+
+interaction_with:
+  - "Product Analyst (provides: data infrastructure and pipelines; receives: data access requirements)"
+  - "Data Scientists (provides: reliable data access and processing capabilities; receives: data transformation needs)"
+  - "Backend Developers (collaborates: on data integration and API development; receives: application data requirements)"
+  - "DevOps Engineers (collaborates: on infrastructure and deployment for data systems)"
+  - "Product Owner (receives: data requirements for product features; provides: data capabilities and constraints)"
+  - "Security Engineers (collaborates: on data security and compliance implementation)"
+  - "Technical Architect / Lead Developer (receives: system architecture guidelines; provides: data architecture input)"
+  - "Project Manager (provides: data pipeline timelines; receives: project deadlines)"
+  - "Business stakeholders (provides: data solutions; receives: business data requirements)"
+
+decision_authority:
+  - Data architecture and infrastructure design
+  - Database technology selection and implementation
+  - ETL/ELT pipeline design and optimization
+  - Data modeling and schema design
+  - Data quality processes and validation methods
+  - Data storage and retrieval optimization
+  - Data pipeline monitoring and alerting
+  - Data integration approaches and methods
+
+scalability:
+  - "Small team: May handle all data engineering tasks including some data analysis responsibilities"
+  - "Large team: May specialize in specific areas like data pipelines, data warehousing, or real-time data processing"
+
+agile_mapping:
+  - "Scrum role: Development Team Member"
+  - "Sprint Planning: Provides input on data engineering tasks and estimates"
+  - "Daily Scrum: Updates on data pipeline development and blockers"
+  - "Sprint Review: Demonstrates completed data infrastructure and pipeline features"
+  - "Sprint Retrospective: Contributes to process improvements for data engineering"
+  - "Backlog Refinement: Helps clarify data requirements and technical feasibility"
+
+knowledge_sharing:
+  - Document data architecture and pipeline processes
+  - Create and maintain data dictionaries and catalogs
+  - Train team members on data access and usage patterns
+  - Share knowledge about data technologies and best practices
+  - Conduct workshops on data modeling and pipeline development
+
+remote_work_considerations:
+  - Establish secure remote access to data systems
+  - Create comprehensive documentation for data infrastructure
+  - Use collaborative tools for data modeling and architecture design
+  - Implement automated monitoring for distributed data systems
+  - Establish clear communication channels for data-related issues
+
+success_criteria:
+  - Reliable and efficient data pipelines with minimal downtime
+  - Scalable and maintainable data infrastructure
+  - High-quality, accessible data that meets technical requirements
+  - Well-documented data architecture and processes
+  - Efficient data storage and retrieval mechanisms
+  - Timely delivery of data infrastructure for analysis needs
+  - Compliance with data governance and security standards
+  - Successful integration with various data sources and systems
+
+key_performance_indicators:
+  - "Data pipeline reliability: Percentage of successful pipeline runs"
+  - "Data freshness: Time between data creation and availability for analysis"
+  - "Query performance: Average response time for common data queries"
+  - "Data quality: Error rates and data validation success metrics"
+  - "Infrastructure cost efficiency: Data storage and processing costs"
+  - "System scalability: Ability to handle increasing data volumes"
+  - "Data coverage: Percentage of required data sources successfully integrated"
+  - "Documentation completeness: Coverage of data systems in documentation" 

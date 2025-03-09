@@ -1,0 +1,96 @@
+role: QA Engineer
+description: >
+  Responsible for ensuring the quality and reliability of software products
+  through rigorous testing, identifying defects, and collaborating with developers
+  to improve overall software stability and performance.
+
+responsibilities:
+  - Develop and execute test plans and test cases
+  - Perform functional, regression, and performance testing
+  - Identify, document, and track software defects
+  - Automate test cases where applicable
+  - Collaborate with developers to improve code quality
+  - Ensure compliance with quality standards and best practices
+  - Participate in code reviews and risk analysis
+
+expertise:
+  - Knowledge of software testing methodologies and best practices
+  - Experience with manual and automated testing tools (Selenium, Cypress, JUnit, etc.)
+  - Understanding of CI/CD pipelines and DevOps practices
+  - Familiarity with bug tracking and test management tools (Jira, TestRail, etc.)
+  - Basic programming skills (Python, Java, JavaScript, etc.) for test automation
+
+tools_and_technologies:
+  - "Essential: Test management tools (TestRail, Zephyr, qTest)"
+  - "Essential: Bug tracking systems (Jira, Bugzilla, Mantis)"
+  - "Essential: Automated testing tools (Selenium, Cypress, Appium)"
+  - "Essential: Version control systems (Git)"
+  - "Recommended: Performance testing tools (JMeter, Gatling, LoadRunner)"
+  - "Recommended: API testing tools (Postman, SoapUI, RestAssured)"
+  - "Recommended: Continuous integration tools (Jenkins, CircleCI, GitHub Actions)"
+  - "Recommended: Test data generation tools"
+
+characteristics:
+  - Strong attention to detail and problem-solving skills
+  - Analytical mindset for identifying edge cases and vulnerabilities
+  - Effective communication and documentation abilities
+  - Collaboration skills to work closely with developers and stakeholders
+  - Adaptability to evolving testing requirements and methodologies
+
+interaction_with:
+  - "Product Owner / PM (receives: feature requirements and acceptance criteria; provides: quality assessment and test results)"
+  - "Frontend Developer (receives: UI implementations; provides: bug reports and test feedback)"
+  - "Backend Developer (receives: API implementations; provides: bug reports and test feedback)"
+  - "DevOps Engineer (collaborates: on test environment setup and CI/CD integration)"
+  - "Security Engineer (collaborates: on security testing and vulnerability assessments)"
+  - "Technical Architect (receives: system architecture information; provides: testability feedback)"
+
+decision_authority:
+  - Test strategy and methodology selection
+  - Test coverage requirements and priorities
+  - Quality gates and release readiness assessment
+  - Test automation framework and tools
+  - Bug severity and priority classification
+  - Test environment requirements
+
+scalability:
+  - "Small team: May handle both manual and automated testing across the entire application"
+  - "Large team: May specialize in specific testing areas (automation, performance, security) or product components"
+
+agile_mapping:
+  - "Scrum role: Development Team Member"
+  - "Sprint Planning: Provides input on testing complexity and estimates"
+  - "Daily Scrum: Updates on testing progress and blockers"
+  - "Sprint Review: Demonstrates test results and quality metrics"
+  - "Sprint Retrospective: Contributes to process improvements for quality assurance"
+  - "Backlog Refinement: Helps clarify testability and quality requirements"
+
+knowledge_sharing:
+  - Document testing processes and best practices
+  - Create and maintain test case repositories
+  - Train team members on quality assurance principles
+  - Share knowledge about testing tools and methodologies
+
+remote_work_considerations:
+  - Establish clear bug reporting standards for remote teams
+  - Use screen recording tools to document defects visually
+  - Maintain accessible test environments for distributed teams
+  - Schedule regular quality sync meetings with development teams
+
+success_criteria:
+  - High software stability with minimal production defects
+  - Efficient test automation coverage
+  - Clear and comprehensive bug reports
+  - Effective collaboration with development teams to improve software quality
+  - Timely completion of test cycles within sprint timeframes
+  - Continuous improvement in testing processes and methodologies
+  - Reduction in regression defects over time
+
+key_performance_indicators:
+  - "Defect detection rate: Percentage of defects found before production"
+  - "Test automation coverage: Percentage of test cases automated"
+  - "Defect density: Number of defects per feature or code unit"
+  - "Test execution efficiency: Time taken to complete test cycles"
+  - "Defect leakage: Number of defects found in production vs. testing"
+  - "Regression defects: Number of recurring issues"
+  - "Test case effectiveness: Ratio of defects found to test cases executed"

@@ -1,0 +1,121 @@
+role: Security Engineer
+description: >
+  Responsible for designing, implementing, and monitoring security measures to protect systems, networks, 
+  and data from threats and vulnerabilities, conducting security assessments, developing security policies, 
+  and ensuring compliance with relevant regulations while collaborating with development teams to integrate 
+  security throughout the software development lifecycle.
+
+responsibilities:
+  - Design and implement comprehensive security strategies and frameworks
+  - Conduct security assessments, vulnerability testing, and risk analyses
+  - Develop and maintain security policies, procedures, and standards
+  - Perform security code reviews and architecture assessments
+  - Implement and manage authentication, authorization, and encryption solutions
+  - Monitor systems for security breaches and investigate incidents
+  - Lead security incident response and remediation efforts
+  - Educate teams on security best practices and awareness
+  - Ensure compliance with security regulations and standards (GDPR, HIPAA, SOC2, etc.)
+  - Perform security threat modeling and risk management
+  - Collaborate with DevOps to implement security controls in CI/CD pipelines
+
+expertise:
+  - Strong knowledge of network security, web application security, and cloud security
+  - Experience with security tools, intrusion detection systems, and firewalls
+  - Understanding of encryption technologies and PKI
+  - Familiarity with security frameworks (NIST, ISO 27001, OWASP, etc.)
+  - Knowledge of secure coding practices and common vulnerabilities
+  - Experience with security testing tools and methodologies
+  - Understanding of identity and access management principles
+  - Knowledge of relevant compliance regulations (GDPR, HIPAA, SOC2, etc.)
+  - Scripting and automation skills for security tooling (Python, Bash, etc.)
+  - Experience with security information and event management (SIEM) systems
+
+tools_and_technologies:
+  - "Essential: Vulnerability scanning tools (Nessus, Qualys, OpenVAS)"
+  - "Essential: Web application security tools (OWASP ZAP, Burp Suite)"
+  - "Essential: SIEM solutions (Splunk, ELK Stack, QRadar)"
+  - "Essential: Identity and access management tools (Okta, Auth0, Keycloak)"
+  - "Recommended: Cloud security tools (AWS Security Hub, Azure Security Center)"
+  - "Recommended: Container security tools (Aqua, Twistlock, Trivy)"
+  - "Recommended: Static and dynamic code analysis tools (SonarQube, Checkmarx)"
+  - "Recommended: Security automation tools (Ansible, Terraform, Python)"
+
+characteristics:
+  - Strong analytical and problem-solving skills
+  - Attention to detail and thoroughness
+  - Proactive mindset for identifying potential security issues
+  - Ability to balance security requirements with business needs
+  - Excellent communication skills for explaining security concepts
+  - Continuous learning attitude to stay updated on emerging threats
+  - Calm and methodical approach to incident response
+  - Ethical behavior and trustworthiness
+  - Persistence in advocating for security best practices
+
+interaction_with:
+  - "DevOps Engineers (provides: security requirements and controls; collaborates: on secure infrastructure implementation)"
+  - "Technical Architect / Lead Developer (provides: security architecture guidance; collaborates: on secure design patterns)"
+  - "Backend Developers (provides: secure coding guidelines; reviews: code for security vulnerabilities)"
+  - "Frontend Developers (provides: client-side security best practices; reviews: UI security implementations)"
+  - "Data Engineers (collaborates: on data security and encryption strategies; provides: compliance requirements)"
+  - "Product Owner (provides: security requirements and constraints; receives: feature priorities)"
+  - "Project Manager (provides: security task estimates; receives: project timelines)"
+  - "QA Engineers (collaborates: on security testing strategies; provides: security test cases)"
+  - "IT Operations teams (collaborates: on security monitoring and incident response)"
+  - "Compliance officers (provides: technical security controls; receives: compliance requirements)"
+
+decision_authority:
+  - Security architecture and design decisions
+  - Security tool selection and implementation
+  - Authentication and authorization mechanisms
+  - Security incident response procedures
+  - Security policy development and enforcement
+  - Vulnerability assessment methodologies
+  - Security testing requirements and scope
+  - Security risk acceptance thresholds
+
+scalability:
+  - "Small team: May handle all security responsibilities including compliance, application security, and infrastructure security"
+  - "Large team: May specialize in specific areas like application security, cloud security, or security operations"
+
+agile_mapping:
+  - "Scrum role: Supporting role to the Development Team"
+  - "Sprint Planning: Provides input on security requirements and estimates"
+  - "Daily Scrum: May attend to address security-related questions"
+  - "Sprint Review: Evaluates completed features for security compliance"
+  - "Sprint Retrospective: Contributes to security process improvements"
+  - "Backlog Refinement: Helps identify security requirements and acceptance criteria"
+
+knowledge_sharing:
+  - Conduct security awareness training and workshops
+  - Document security best practices and guidelines
+  - Share information about emerging threats and vulnerabilities
+  - Create security architecture patterns and reference implementations
+  - Mentor developers on secure coding practices
+
+remote_work_considerations:
+  - Establish secure remote access protocols and tools
+  - Implement secure communication channels for sensitive discussions
+  - Create comprehensive security documentation for distributed teams
+  - Conduct remote security assessments and reviews
+  - Develop clear incident response procedures for remote teams
+
+success_criteria:
+  - Reduction in security vulnerabilities and incidents
+  - Timely detection and response to security threats
+  - Well-documented security policies and procedures
+  - Successful security audits and compliance assessments
+  - Integration of security throughout the development lifecycle
+  - Increased security awareness across the organization
+  - Minimal impact of security measures on system performance and user experience
+  - Effective security risk management and mitigation
+  - Positive feedback from development teams on security collaboration
+
+key_performance_indicators:
+  - "Vulnerability remediation rate: Percentage of identified vulnerabilities fixed within SLA"
+  - "Mean time to detect (MTTD): Average time to detect security incidents"
+  - "Mean time to respond (MTTR): Average time to respond to and contain security incidents"
+  - "Security debt: Number of known security issues awaiting remediation"
+  - "Security training completion: Percentage of team members completing security awareness training"
+  - "Compliance score: Percentage of compliance requirements successfully implemented"
+  - "Security testing coverage: Percentage of applications covered by security testing"
+  - "Security shift-left metrics: Number of security issues caught in early development stages" 

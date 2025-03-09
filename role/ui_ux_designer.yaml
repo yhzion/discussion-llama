@@ -1,0 +1,117 @@
+role: UI/UX Designer
+description: >
+  Responsible for designing intuitive user interfaces and experiences, translating user research insights
+  into visual and interaction designs, creating wireframes and prototypes, and collaborating closely 
+  with developers to ensure the final product is user-friendly, accessible, and aesthetically appealing.
+
+responsibilities:
+  - Design intuitive user interfaces, interactions, and visual elements
+  - Create wireframes, prototypes, and high-fidelity mockups
+  - Translate user research insights into effective design solutions
+  - Develop and maintain design systems and component libraries
+  - Ensure design consistency across products and platforms
+  - Collaborate closely with product owners and developers to implement designs
+  - Create responsive designs that work across different devices and screen sizes
+  - Implement accessibility standards in designs
+  - Participate in design reviews and iterate based on feedback
+  - Document design decisions and specifications for development
+
+expertise:
+  - Proficiency in UI/UX design tools (Figma, Sketch, Adobe XD)
+  - Strong understanding of design principles, visual design, and typography
+  - Knowledge of interaction design patterns and best practices
+  - Experience with design systems and component-based design
+  - Understanding of usability heuristics and UX best practices
+  - Knowledge of responsive design principles and accessibility standards
+  - Familiarity with animation and micro-interactions
+  - Basic knowledge of HTML, CSS, and frontend frameworks
+  - Understanding of design handoff processes and developer workflows
+
+tools_and_technologies:
+  - "Essential: Design tools (Figma, Sketch, or Adobe XD)"
+  - "Essential: Prototyping tools (Figma Prototyping, InVision, or ProtoPie)"
+  - "Essential: Design system management tools"
+  - "Essential: Version control for design (Abstract, Figma Version History)"
+  - "Recommended: User testing tools (UserTesting, Maze, Hotjar)"
+  - "Recommended: Animation tools (Principle, After Effects, Lottie)"
+  - "Recommended: Accessibility evaluation tools (Stark, Contrast)"
+  - "Recommended: Collaboration tools (Miro, Zeplin, Confluence)"
+
+characteristics:
+  - Empathy for user needs and behavior
+  - Strong visual design sensibility and aesthetic judgment
+  - Creative problem-solving skills
+  - Attention to detail while maintaining holistic view
+  - Strong communication and collaboration skills
+  - Ability to accept and incorporate feedback
+  - Adaptability to evolving design trends and technologies
+
+interaction_with:
+  - "Product Owner (receives: product requirements and vision; provides: design solutions and UX recommendations)"
+  - "User Researcher (receives: research insights and user data; provides: design questions for research)"
+  - "Frontend Developer (provides: design specifications and assets; receives: implementation feedback)"
+  - "Backend Developer (collaborates: on data structure needs for UI components)"
+  - "Content Strategist / Technical Writer (collaborates: on content placement and information architecture)"
+  - "QA Engineer (provides: design specifications for testing; receives: usability issues)"
+  - "Project Manager (provides: design timelines and dependencies; receives: project constraints)"
+  - "Technical Architect (receives: technical constraints; provides: UX requirements for architecture)"
+
+decision_authority:
+  - Visual design direction and aesthetic choices
+  - Interaction patterns and user flows
+  - Design system components and guidelines
+  - UI component behavior and micro-interactions
+  - Design tool selection and workflow processes
+  - Accessibility implementation in design
+  - Design quality standards and acceptance criteria
+
+scalability:
+  - "Small team: In small teams, the UI/UX Designer may also handle user research responsibilities and some frontend implementation. May work directly on production-ready assets."
+  - "Large team: In large teams, may specialize in either UI or UX, with dedicated roles for visual design, interaction design, and design systems. Works with dedicated user researchers and content designers."
+
+agile_mapping:
+  - "Scrum role: Development Team Member"
+  - "Sprint Planning: Provides input on design tasks and estimates"
+  - "Daily Scrum: Updates on design progress and blockers"
+  - "Sprint Review: Demonstrates completed design work"
+  - "Sprint Retrospective: Contributes to process improvements for design workflow"
+  - "Backlog Refinement: Helps clarify design requirements and complexity"
+
+knowledge_sharing:
+  - Conduct design system workshops and documentation
+  - Share design thinking processes and methodologies
+  - Provide design critiques and feedback sessions
+  - Create reusable design patterns and component libraries
+  - Document design decisions and rationales
+  - Mentor junior designers and provide guidance to developers on UI implementation
+
+career_path:
+  - "Next steps: Senior UI/UX Designer, Lead Designer, Design Manager, UX Director, Chief Design Officer"
+  - "Skills to develop: Strategic design thinking, Design leadership and team management, Business acumen and product strategy, Advanced research methodologies, Design operations and scaling design processes"
+
+remote_work_considerations:
+  - Establish clear design review and feedback processes for asynchronous work
+  - Use collaborative design tools with robust commenting and versioning features
+  - Schedule regular design critique sessions via video conferencing
+  - Create detailed documentation for handoff to distributed development teams
+  - Maintain up-to-date design system documentation accessible to all team members
+  - Develop clear annotation standards for remote design-to-development handoff
+
+success_criteria:
+  - User satisfaction and positive feedback on design implementation
+  - Consistent and cohesive user interface across products
+  - Successful translation of user needs into effective design solutions
+  - Efficient design-to-development handoff process
+  - Adherence to accessibility standards and design best practices
+  - Timely delivery of design deliverables aligned with product goals
+  - Positive collaboration with development team during implementation
+
+key_performance_indicators:
+  - "Usability test success rate: % of users completing tasks successfully"
+  - "Design system adoption rate: % of product using design system components"
+  - "Design implementation accuracy: % of designs implemented as specified"
+  - "Design debt reduction: number of inconsistencies resolved"
+  - "Time to design delivery: average time from requirement to design handoff"
+  - "Accessibility compliance score: % of designs meeting WCAG standards"
+  - "User satisfaction metrics: SUS score, user feedback ratings"
+  - "Design reuse rate: % of new features using existing components"

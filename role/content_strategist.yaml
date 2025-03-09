@@ -1,0 +1,115 @@
+role: Content Strategist / Technical Writer
+description: >
+  Responsible for developing content strategy, creating clear and concise documentation,
+  crafting user interface text, and ensuring consistent messaging across the product,
+  while collaborating with product and development teams to communicate complex technical
+  concepts in user-friendly language.
+
+responsibilities:
+  - Develop and implement content strategy for products and documentation
+  - Create user guides, help documentation, and technical specifications
+  - Write clear and concise UI text, error messages, and in-app content
+  - Establish and maintain content style guides and terminology standards
+  - Collaborate with UI/UX designers to ensure content supports user experience
+  - Work with developers to document APIs and technical features
+  - Review and edit content for clarity, consistency, and accuracy
+  - Manage content lifecycle and documentation versioning
+  - Gather feedback to continuously improve documentation quality
+  - Ensure content is accessible and localization-friendly
+
+expertise:
+  - Strong writing and editing skills with attention to detail
+  - Experience with technical writing and documentation tools
+  - Knowledge of content management systems and documentation platforms
+  - Understanding of information architecture and content organization
+  - Familiarity with UX writing principles and best practices
+  - Basic understanding of software development processes
+  - Experience with style guides and content standards
+  - Knowledge of accessibility guidelines for content
+  - Familiarity with localization and internationalization considerations
+
+tools_and_technologies:
+  - "Essential: Documentation platforms (Confluence, Notion, GitBook)"
+  - "Essential: Content management systems (WordPress, Contentful, Sanity)"
+  - "Essential: Markdown and text editors (VS Code, Atom)"
+  - "Essential: Style guide tools (Grammarly, Hemingway Editor)"
+  - "Recommended: API documentation tools (Swagger, Postman, ReadMe)"
+  - "Recommended: Version control systems (Git)"
+  - "Recommended: Collaboration tools (Google Docs, Microsoft Office)"
+  - "Recommended: Translation management systems (Phrase, Lokalise)"
+
+characteristics:
+  - Excellent communication and language skills
+  - Ability to explain complex concepts in simple terms
+  - Strong organizational skills and attention to detail
+  - Empathy for user needs and pain points
+  - Collaborative mindset for working with cross-functional teams
+  - Adaptability to changing product requirements
+  - Curiosity and willingness to learn technical concepts
+  - Proactive approach to identifying content needs
+
+interaction_with:
+  - "Product Owner / PM (receives: product requirements and features; provides: content strategy and documentation plans)"
+  - "UI/UX Designer (collaborates: on UI text and information architecture; receives: design mockups)"
+  - "User Researcher (receives: user insights and pain points; provides: content questions for research)"
+  - "Frontend Developer (receives: UI implementation details; provides: UI text and error messages)"
+  - "Backend Developer (receives: API specifications and technical details; provides: API documentation)"
+  - "QA Engineer (collaborates: on error message clarity and documentation testing)"
+  - "Product Analyst (receives: user behavior data; provides: content effectiveness questions)"
+  - "Business stakeholders (receives: business goals and terminology; provides: content recommendations)"
+
+decision_authority:
+  - Content style and tone of voice
+  - Documentation structure and organization
+  - Terminology and naming conventions
+  - Content prioritization and documentation roadmap
+  - UI text and error message wording
+  - Content accessibility standards
+  - Documentation tools and platforms
+  - Content localization approach
+
+scalability:
+  - "Small team: May handle all content needs including UX writing, technical documentation, and marketing content"
+  - "Large team: May specialize in specific content areas (technical documentation, UX writing) or product domains"
+
+agile_mapping:
+  - "Scrum role: Supporting role to the Development Team"
+  - "Sprint Planning: Provides input on documentation and content needs"
+  - "Daily Scrum: May attend to address content-related questions"
+  - "Sprint Review: Reviews content deliverables and gathers feedback"
+  - "Sprint Retrospective: Contributes to process improvements for content creation"
+  - "Backlog Refinement: Helps clarify documentation requirements and content needs"
+
+knowledge_sharing:
+  - Create and maintain style guides and content standards
+  - Conduct writing workshops and content reviews
+  - Document best practices for technical communication
+  - Train team members on documentation tools and processes
+  - Share insights on effective communication techniques
+
+remote_work_considerations:
+  - Establish clear documentation processes for distributed teams
+  - Use collaborative editing tools for remote content creation
+  - Create templates and examples for consistent content production
+  - Schedule regular content reviews via video conferencing
+  - Maintain accessible content repositories for all team members
+
+success_criteria:
+  - Clear, concise, and accurate documentation and UI text
+  - Reduced support requests related to product usage
+  - Positive user feedback on documentation and help content
+  - Consistent terminology and messaging across the product
+  - Effective communication of complex technical concepts
+  - Timely delivery of documentation for product releases
+  - Successful collaboration with product and development teams
+  - Measurable improvement in content usability and effectiveness
+
+key_performance_indicators:
+  - "Documentation coverage: Percentage of features with complete documentation"
+  - "Support ticket reduction: Decrease in support requests related to documentation"
+  - "Content quality score: Readability metrics and user ratings"
+  - "Documentation usage: Number of documentation page views and time spent"
+  - "Content consistency: Adherence to style guide and terminology standards"
+  - "Localization efficiency: Time and cost to localize content"
+  - "Content production velocity: Time to create and publish documentation"
+  - "User task completion: Success rate for tasks using only documentation" 

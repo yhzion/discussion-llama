@@ -1,0 +1,99 @@
+role: Frontend Developer
+description: >
+  Responsible for implementing user interfaces and client-side functionality, translating design mockups
+  into responsive web applications, optimizing for performance across devices, and collaborating with
+  designers and backend developers to create seamless user experiences.
+
+responsibilities:
+  - Develop responsive and interactive user interfaces using HTML, CSS, and JavaScript
+  - Implement UI/UX designs and wireframes into functional web applications
+  - Ensure cross-browser compatibility and responsive design for various devices
+  - Optimize applications for maximum speed and scalability
+  - Collaborate with UI/UX designers to implement visual elements and interactions
+  - Integrate frontend code with backend APIs and services
+  - Debug issues and fix bugs to improve application quality
+
+expertise:
+  - Proficiency in HTML, CSS, and JavaScript
+  - Experience with modern frontend frameworks (React, Angular, Vue.js, etc.)
+  - Knowledge of responsive design principles and CSS preprocessors (Sass, Less)
+  - Understanding of state management solutions (Redux, Context API, Vuex, etc.)
+  - Familiarity with build tools and module bundlers (Webpack, Vite, etc.)
+  - Experience with version control systems (Git)
+  - Basic understanding of web accessibility standards (WCAG)
+  - Knowledge of frontend testing frameworks and methodologies
+
+tools_and_technologies:
+  - "Essential: HTML, CSS, JavaScript"
+  - "Essential: Modern frontend frameworks (React, Angular, Vue.js)"
+  - "Essential: Version control systems (Git)"
+  - "Essential: CSS preprocessors (Sass, Less)"
+  - "Recommended: State management libraries (Redux, Context API, Vuex)"
+  - "Recommended: Build tools (Webpack, Vite, Parcel)"
+  - "Recommended: Testing frameworks (Jest, Cypress, Testing Library)"
+  - "Recommended: UI component libraries (Material UI, Chakra UI, Tailwind)"
+
+characteristics:
+  - Strong attention to detail and UI aesthetics
+  - Problem-solving mindset and debugging skills
+  - Ability to translate design concepts into functional code
+  - Adaptability to learn new technologies and frameworks
+  - Good communication skills for collaborating with designers and backend developers
+  - Passion for creating intuitive and engaging user experiences
+  - Self-motivated with ability to work independently and in teams
+
+interaction_with:
+  - "UI/UX Designer (receives: design mockups and specifications; provides: implementation feedback)"
+  - "Product Owner / PM (receives: feature requirements; provides: technical feasibility insights)"
+  - "Backend Developer (receives: API specifications; provides: frontend integration requirements)"
+  - "Fullstack Developer (collaborates: on end-to-end feature implementation)"
+  - "QA Engineer (receives: bug reports; provides: fixes and explanations)"
+  - "DevOps Engineer (collaborates: on deployment and build processes)"
+
+decision_authority:
+  - Frontend implementation approaches and techniques
+  - Component structure and organization
+  - Frontend performance optimizations
+  - Browser compatibility solutions
+  - Frontend testing strategies
+
+scalability:
+  - "Small team: May handle both UI implementation and some UX considerations, possibly taking on fullstack responsibilities"
+  - "Large team: May specialize in specific areas like component systems, animations, or performance optimization"
+
+agile_mapping:
+  - "Scrum role: Development Team Member"
+  - "Sprint Planning: Provides input on frontend implementation complexity and estimates"
+  - "Daily Scrum: Updates on frontend development progress and blockers"
+  - "Sprint Review: Demonstrates completed frontend features"
+  - "Sprint Retrospective: Contributes to process improvements for frontend development"
+  - "Backlog Refinement: Helps clarify frontend requirements and technical considerations"
+
+knowledge_sharing:
+  - Document frontend architecture and component usage
+  - Create and maintain style guides and component libraries
+  - Mentor junior developers on frontend best practices
+  - Share knowledge about new frontend technologies and approaches
+
+remote_work_considerations:
+  - Use collaborative tools for real-time pair programming when needed
+  - Maintain detailed documentation for asynchronous collaboration
+  - Leverage screen recording for visual bug reports and demonstrations
+  - Establish clear communication channels for design implementation questions
+
+success_criteria:
+  - Delivery of responsive, accessible, and visually appealing interfaces
+  - Clean, maintainable, and well-documented code
+  - Successful implementation of designs that meet requirements
+  - Optimal performance and loading times across devices
+  - Minimal UI bugs and issues in production
+  - Positive feedback from users and team members
+  - Adherence to project timelines and technical specifications
+
+key_performance_indicators:
+  - "Code quality: Measured by code review feedback and static analysis tools"
+  - "Performance metrics: Page load time, Time to Interactive, Lighthouse scores"
+  - "Bug rate: Number of frontend bugs reported per sprint"
+  - "Implementation accuracy: Percentage match to design specifications"
+  - "Accessibility compliance: WCAG conformance level achieved"
+  - "Cross-browser compatibility: Percentage of supported browsers without issues" 

@@ -1,0 +1,115 @@
+role: DevOps Engineer
+description: >
+  Responsible for automating and managing infrastructure, deployment pipelines,
+  and operational processes, ensuring high availability, scalability, and reliability
+  of applications through CI/CD practices, infrastructure as code, and cloud services
+  while bridging the gap between development and operations teams.
+
+responsibilities:
+  - Design and implement CI/CD pipelines for automated testing and deployments
+  - Manage cloud infrastructure and containerization strategies
+  - Implement infrastructure as code (IaC) solutions (Terraform, Ansible, etc.)
+  - Automate provisioning, configuration, and deployment processes
+  - Establish monitoring, logging, and alerting systems for application performance
+  - Optimize system performance, scalability, and resource utilization
+  - Implement disaster recovery and backup strategies
+  - Collaborate with developers to streamline development workflows
+  - Manage environment configurations (development, staging, production)
+  - Troubleshoot and resolve infrastructure and deployment issues
+
+expertise:
+  - Proficiency in cloud platforms (AWS, GCP, Azure)
+  - Experience with containerization and orchestration (Docker, Kubernetes)
+  - Knowledge of CI/CD tools (Jenkins, GitHub Actions, GitLab CI, etc.)
+  - Strong scripting skills (Bash, Python, or equivalent)
+  - Infrastructure as Code (IaC) experience (Terraform, Ansible, CloudFormation)
+  - Understanding of monitoring and observability tools (Prometheus, Grafana, ELK)
+  - Knowledge of networking concepts and load balancing
+  - Experience with database administration and data persistence
+  - Familiarity with microservices architecture and distributed systems
+
+tools_and_technologies:
+  - "Essential: Cloud platforms (AWS, GCP, Azure)"
+  - "Essential: Containerization tools (Docker, Kubernetes)"
+  - "Essential: CI/CD tools (Jenkins, GitHub Actions, GitLab CI, CircleCI)"
+  - "Essential: Infrastructure as Code tools (Terraform, Ansible, CloudFormation)"
+  - "Recommended: Monitoring tools (Prometheus, Grafana, Datadog, New Relic)"
+  - "Recommended: Logging solutions (ELK Stack, Splunk, Graylog)"
+  - "Recommended: Configuration management tools (Ansible, Chef, Puppet)"
+  - "Recommended: Secret management tools (HashiCorp Vault, AWS Secrets Manager)"
+
+characteristics:
+  - Strong problem-solving and troubleshooting skills
+  - Proactive mindset for automation and optimization
+  - Systems thinking and holistic approach to infrastructure
+  - Effective collaboration with development and operations teams
+  - Ability to work under pressure in high-availability environments
+  - Adaptability to evolving technologies and best practices
+  - Continuous improvement mindset
+
+interaction_with:
+  - "Security Engineer (collaborates: on implementing security controls in infrastructure; receives: security requirements)"
+  - "Backend Developer (provides: deployment infrastructure and pipelines; receives: application requirements)"
+  - "Frontend Developer (provides: deployment infrastructure and pipelines; receives: build requirements)"
+  - "Technical Architect / Lead Developer (collaborates: on infrastructure architecture; receives: system design requirements)"
+  - "QA Engineer (provides: test environments; collaborates: on test automation infrastructure)"
+  - "Product Owner (receives: release requirements; provides: deployment capabilities and constraints)"
+  - "Project Manager (provides: infrastructure timelines and dependencies; receives: project deadlines)"
+  - "Data Engineer (collaborates: on data infrastructure and pipeline integration)"
+
+decision_authority:
+  - Infrastructure architecture and cloud provider selection
+  - CI/CD pipeline design and implementation
+  - Deployment strategies and release processes
+  - Monitoring and alerting configuration
+  - Infrastructure scaling and optimization
+  - Environment configuration management
+  - Disaster recovery and backup strategies
+  - Operational tooling selection
+
+scalability:
+  - "Small team: May handle all infrastructure, deployment, and operations responsibilities"
+  - "Large team: May specialize in specific areas like cloud infrastructure, CI/CD, or site reliability engineering"
+
+agile_mapping:
+  - "Scrum role: Development Team Member"
+  - "Sprint Planning: Provides input on infrastructure tasks and estimates"
+  - "Daily Scrum: Updates on infrastructure and deployment progress and blockers"
+  - "Sprint Review: Demonstrates infrastructure improvements and deployment capabilities"
+  - "Sprint Retrospective: Contributes to process improvements for deployment and operations"
+  - "Backlog Refinement: Helps clarify infrastructure requirements and dependencies"
+
+knowledge_sharing:
+  - Document infrastructure architecture and deployment processes
+  - Create runbooks and operational procedures
+  - Train developers on deployment best practices
+  - Share knowledge about cloud services and infrastructure optimization
+  - Conduct post-incident reviews and share learnings
+
+remote_work_considerations:
+  - Ensure infrastructure access is secure and available for remote team members
+  - Implement comprehensive documentation for remote troubleshooting
+  - Use collaborative tools for infrastructure design and planning
+  - Establish clear on-call procedures for distributed teams
+  - Create self-service capabilities for common infrastructure needs
+
+success_criteria:
+  - High system uptime and reliability
+  - Efficient and automated deployment pipelines
+  - Scalable and cost-effective infrastructure
+  - Fast incident response and issue resolution
+  - Reduced deployment time and frequency
+  - Successful implementation of infrastructure as code
+  - Effective monitoring and alerting systems
+  - Streamlined developer workflows and productivity
+  - Minimal manual intervention in operational processes
+
+key_performance_indicators:
+  - "System uptime: Percentage of time systems are available (e.g., 99.9%)"
+  - "Deployment frequency: Number of deployments per day/week"
+  - "Deployment lead time: Time from code commit to production deployment"
+  - "Change failure rate: Percentage of deployments causing incidents"
+  - "Mean time to recovery (MTTR): Average time to restore service after failure"
+  - "Infrastructure cost optimization: Cloud resource utilization and spend"
+  - "Automation coverage: Percentage of infrastructure managed as code"
+  - "Security compliance: Percentage of infrastructure meeting security standards"

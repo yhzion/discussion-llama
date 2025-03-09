@@ -1,0 +1,122 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Role Definition Schema",
+  "description": "Schema for defining software development team roles",
+  "type": "object",
+  "required": [
+    "role",
+    "description",
+    "responsibilities",
+    "expertise",
+    "characteristics",
+    "interaction_with",
+    "success_criteria"
+  ],
+  "properties": {
+    "role": {
+      "type": "string",
+      "description": "The name of the role"
+    },
+    "description": {
+      "type": "string",
+      "description": "A comprehensive description of the role's purpose and main responsibilities"
+    },
+    "responsibilities": {
+      "type": "array",
+      "description": "Key tasks and duties associated with the role",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "expertise": {
+      "type": "array",
+      "description": "Technical skills and knowledge required for the role",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "tools_and_technologies": {
+      "type": "array",
+      "description": "Essential and recommended tools and technologies for the role",
+      "items": {
+        "type": "string"
+      }
+    },
+    "characteristics": {
+      "type": "array",
+      "description": "Personal qualities and soft skills needed for the role",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "interaction_with": {
+      "type": "array",
+      "description": "Other roles this role typically collaborates with, including the nature of interaction",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "decision_authority": {
+      "type": "array",
+      "description": "Areas where this role has final decision-making authority",
+      "items": {
+        "type": "string"
+      }
+    },
+    "scalability": {
+      "type": "array",
+      "description": "How the role adapts in different team sizes",
+      "items": {
+        "type": "string"
+      }
+    },
+    "agile_mapping": {
+      "type": "array",
+      "description": "How the role maps to Agile/Scrum frameworks and ceremonies",
+      "items": {
+        "type": "string"
+      }
+    },
+    "knowledge_sharing": {
+      "type": "array",
+      "description": "Ways the role contributes to organizational knowledge",
+      "items": {
+        "type": "string"
+      }
+    },
+    "career_path": {
+      "type": "array",
+      "description": "Potential career progression and skills to develop",
+      "items": {
+        "type": "string"
+      }
+    },
+    "remote_work_considerations": {
+      "type": "array",
+      "description": "Guidelines for effective remote collaboration in this role",
+      "items": {
+        "type": "string"
+      }
+    },
+    "success_criteria": {
+      "type": "array",
+      "description": "Metrics to evaluate performance in the role",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "key_performance_indicators": {
+      "type": "array",
+      "description": "Measurable metrics to evaluate performance",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+} 

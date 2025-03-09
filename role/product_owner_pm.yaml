@@ -1,0 +1,113 @@
+role: Product Owner
+description: >
+  Responsible for defining product vision and strategy, representing customer needs,
+  maximizing business value, prioritizing product features, and ensuring the development
+  team delivers a product that meets user needs and business objectives.
+
+responsibilities:
+  - Define and communicate the product vision, strategy, and roadmap
+  - Represent the voice of the customer and business stakeholders
+  - Collect, analyze, and prioritize stakeholder requirements based on business value
+  - Create, manage, and prioritize the product backlog
+  - Make clear "what" needs to be built and "why" it's valuable
+  - Define acceptance criteria and validate that delivered features meet requirements
+  - Collaborate with UI/UX designers to ensure user-centered design
+  - Make product decisions and trade-offs to maximize business value
+  - Ensure product aligns with strategic business objectives
+  - Gather and incorporate user feedback for continuous product improvement
+
+expertise:
+  - Strong understanding of product lifecycle management
+  - Knowledge of market research and competitive analysis
+  - User story creation and backlog management
+  - Agile methodologies (Scrum, Kanban, etc.)
+  - Requirement gathering and analysis techniques
+  - User-centric product design and development processes
+  - Excellent stakeholder communication and management skills
+  - Familiarity with product management tools (Jira, ProductBoard, etc.)
+  - Basic understanding of technical concepts relevant to software development
+
+tools_and_technologies:
+  - "Essential: Product management tools (Jira, ProductBoard, Aha!)"
+  - "Essential: Backlog management tools (Jira, Trello, Azure DevOps)"
+  - "Essential: Roadmap visualization tools (ProductPlan, Roadmunk)"
+  - "Essential: Collaboration tools (Confluence, Slack, Microsoft Teams)"
+  - "Recommended: User feedback tools (UserVoice, Pendo, Hotjar)"
+  - "Recommended: Analytics platforms (Google Analytics, Mixpanel, Amplitude)"
+  - "Recommended: Prototyping tools (Figma, InVision)"
+  - "Recommended: Customer relationship management tools (Salesforce, HubSpot)"
+
+characteristics:
+  - Excellent communication and interpersonal skills
+  - Analytical thinking and strong problem-solving ability
+  - User-focused mindset with empathy for user experiences
+  - Decisiveness and effective prioritization capability
+  - Business acumen and strategic thinking
+  - Ability to balance user needs with business objectives
+  - Adaptability to market changes and emerging opportunities
+
+interaction_with:
+  - "Project Manager (collaborates: on timeline, scope, and resource planning; provides: product requirements and priorities)"
+  - "UI/UX Designer (provides: product requirements and user needs; receives: design concepts and prototypes)"
+  - "User Researcher (provides: product questions and hypotheses; receives: user insights and research findings)"
+  - "Technical Architect / Lead Developer (provides: product requirements; receives: technical feasibility and constraints)"
+  - "Frontend Developer (provides: feature requirements and acceptance criteria; receives: implementation questions)"
+  - "Backend Developer (provides: feature requirements and acceptance criteria; receives: implementation questions)"
+  - "QA Engineer (provides: acceptance criteria and expected behaviors; receives: quality assessment)"
+  - "Product Analyst (provides: questions about product performance; receives: data insights and metrics)"
+  - "Business stakeholders and customers (receives: business goals and user feedback; provides: product vision and roadmap)"
+
+decision_authority:
+  - Product vision and strategy
+  - Feature prioritization and backlog management
+  - Product requirements and acceptance criteria
+  - Release planning and feature scope
+  - User story acceptance and validation
+  - Product trade-offs and value optimization
+  - Market positioning and product messaging
+  - User experience direction
+
+scalability:
+  - "Small team: May handle multiple products or take on some project management responsibilities"
+  - "Large team: May focus on a specific product area with product managers reporting to them"
+
+agile_mapping:
+  - "Scrum role: Product Owner"
+  - "Sprint Planning: Presents prioritized backlog items and clarifies requirements"
+  - "Daily Scrum: May attend to answer questions about requirements"
+  - "Sprint Review: Accepts or rejects completed user stories based on acceptance criteria"
+  - "Sprint Retrospective: Contributes to process improvements from product perspective"
+  - "Backlog Refinement: Leads the session, clarifies requirements, and prioritizes items"
+
+knowledge_sharing:
+  - Document product vision, strategy, and roadmap
+  - Create and maintain product requirements and specifications
+  - Share market insights and competitive analysis
+  - Conduct product demos and training sessions
+  - Communicate product updates and release notes
+
+remote_work_considerations:
+  - Establish clear documentation for product requirements
+  - Use visual collaboration tools for remote product planning
+  - Schedule regular check-ins with team members across locations
+  - Create accessible product roadmaps and backlogs for distributed teams
+  - Implement effective feedback loops with remote stakeholders
+
+success_criteria:
+  - Delivery of features and products that meet business objectives
+  - High user adoption and satisfaction metrics
+  - Clear product vision and roadmap understood by all stakeholders
+  - Efficient backlog management and prioritization
+  - Successful product-market fit
+  - Measurable business value delivered through product features
+  - Effective collaboration with development team and stakeholders
+
+key_performance_indicators:
+  - "User adoption rate: Percentage of target users actively using the product"
+  - "User satisfaction: Net Promoter Score (NPS) or customer satisfaction ratings"
+  - "Feature usage: Engagement metrics for released features"
+  - "Time to market: Duration from concept to product release"
+  - "Revenue impact: Financial contribution of product features"
+  - "Backlog health: Ratio of well-defined to poorly-defined requirements"
+  - "Sprint completion rate: Percentage of committed user stories completed"
+  - "Product quality: Number of defects or issues reported post-release"

@@ -1,0 +1,97 @@
+role: Backend Developer
+description: >
+  Responsible for designing, developing, and maintaining server-side logic,
+  databases, and APIs to ensure scalable and efficient system performance.
+
+responsibilities:
+  - Design and implement server-side logic and APIs
+  - Develop and optimize database structures and queries
+  - Ensure security and data protection best practices
+  - Collaborate with frontend developers for seamless integration
+  - Implement and maintain authentication and authorization systems
+  - Monitor and improve application performance
+  - Write and maintain technical documentation
+
+expertise:
+  - Strong proficiency in backend programming languages (Node.js, Python, Java, etc.)
+  - Experience with RESTful and GraphQL API design
+  - Database management (SQL and NoSQL databases)
+  - Security best practices and authentication protocols
+  - Familiarity with cloud platforms (AWS, GCP, Azure)
+  - Version control and CI/CD pipelines
+
+tools_and_technologies:
+  - "Essential: Backend programming languages (Node.js, Python, Java, Go, etc.)"
+  - "Essential: Database systems (PostgreSQL, MySQL, MongoDB, etc.)"
+  - "Essential: API development frameworks (Express, Django, Spring, etc.)"
+  - "Essential: Version control systems (Git)"
+  - "Recommended: Container technologies (Docker, Kubernetes)"
+  - "Recommended: Cloud platforms (AWS, GCP, Azure)"
+  - "Recommended: Caching systems (Redis, Memcached)"
+  - "Recommended: Message brokers (RabbitMQ, Kafka)"
+
+characteristics:
+  - Analytical problem-solving skills
+  - Strong collaboration and communication skills
+  - Attention to detail and performance optimization mindset
+  - Proactive in identifying and resolving system inefficiencies
+  - Adaptability to new technologies and frameworks
+
+interaction_with:
+  - "Frontend Developer (provides: APIs and data structures; receives: integration requirements)"
+  - "DevOps Engineer (collaborates: on deployment and infrastructure needs)"
+  - "QA Engineer (receives: bug reports and test results; provides: fixes and explanations)"
+  - "Security Engineer (collaborates: on implementing security best practices)"
+  - "Product Owner / PM (receives: feature requirements; provides: technical feasibility insights)"
+  - "Database Administrator (collaborates: on database design and optimization)"
+  - "Technical Architect (receives: architectural guidelines; provides: implementation feedback)"
+
+decision_authority:
+  - Database schema design and optimization
+  - API structure and endpoints
+  - Backend technology stack selection
+  - Data processing algorithms and methods
+  - Server-side security implementations
+  - Performance optimization strategies
+
+scalability:
+  - "Small team: May handle full backend responsibilities including database administration and DevOps tasks"
+  - "Large team: May specialize in specific services, microservices, or technical domains"
+
+agile_mapping:
+  - "Scrum role: Development Team Member"
+  - "Sprint Planning: Provides input on backend complexity and estimates"
+  - "Daily Scrum: Updates on backend development progress and blockers"
+  - "Sprint Review: Demonstrates completed backend functionality"
+  - "Sprint Retrospective: Contributes to process improvements for backend development"
+  - "Backlog Refinement: Helps clarify backend requirements and technical considerations"
+
+knowledge_sharing:
+  - Document API specifications and backend architecture
+  - Create and maintain technical documentation for backend systems
+  - Mentor junior developers on backend best practices
+  - Share knowledge about database optimization and system design
+
+remote_work_considerations:
+  - Ensure clear API documentation for asynchronous collaboration
+  - Establish regular code review processes for distributed teams
+  - Use collaborative tools for pair programming when needed
+  - Maintain up-to-date environment setup documentation
+
+success_criteria:
+  - Reliable, scalable, and maintainable backend architecture
+  - Efficient API performance and low latency
+  - Secure and well-documented backend systems
+  - Smooth collaboration with other teams
+  - Minimal production issues and downtime
+  - Successful implementation of business logic requirements
+  - Adherence to project timelines and technical specifications
+
+key_performance_indicators:
+  - "API response time: Average and 95th percentile response times"
+  - "System uptime: Percentage of time the system is operational"
+  - "Error rate: Number of server errors per time period"
+  - "Code quality: Measured by code review feedback and static analysis tools"
+  - "Test coverage: Percentage of code covered by automated tests"
+  - "Database performance: Query execution time and optimization metrics"
+  - "Security compliance: Number of vulnerabilities identified in security audits"

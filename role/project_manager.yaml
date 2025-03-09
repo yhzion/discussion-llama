@@ -1,0 +1,120 @@
+role: Project Manager
+description: >
+  Responsible for planning, executing, and closing projects on time and within budget, coordinating
+  team members and resources, managing risks and issues, ensuring project deliverables meet quality
+  standards, and implementing effective processes to achieve project objectives aligned
+  with organizational goals.
+
+responsibilities:
+  - Develop and maintain detailed project plans, schedules, and budgets
+  - Coordinate and allocate resources across project activities
+  - Establish project management processes and methodologies
+  - Track project progress and adjust plans as necessary
+  - Identify, assess, and manage project risks and issues
+  - Facilitate communication between team members and stakeholders
+  - Conduct regular status meetings and provide progress reports
+  - Manage project constraints (time, cost, scope, quality)
+  - Ensure project deliverables meet quality standards
+  - Manage project documentation and knowledge transfer
+  - Lead post-project evaluations to identify successful practices and lessons learned
+
+expertise:
+  - Strong knowledge of project management methodologies (Agile, Waterfall, etc.)
+  - Experience with project management tools and software
+  - Understanding of resource allocation and budgeting
+  - Knowledge of risk management techniques
+  - Familiarity with quality assurance processes
+  - Basic understanding of software development lifecycle
+  - Proficiency in documentation and reporting
+  - Knowledge of team dynamics and conflict resolution techniques
+  - Experience with project estimation and forecasting
+
+tools_and_technologies:
+  - "Essential: Project management tools (Jira, Asana, Monday, MS Project)"
+  - "Essential: Collaboration tools (Slack, Microsoft Teams, Confluence)"
+  - "Essential: Gantt chart and roadmap tools (TeamGantt, Roadmunk)"
+  - "Essential: Documentation platforms (Confluence, Notion, SharePoint)"
+  - "Recommended: Resource management tools (Resource Guru, Float)"
+  - "Recommended: Risk management tools (Risk Register templates)"
+  - "Recommended: Time tracking tools (Harvest, Toggl, Clockify)"
+  - "Recommended: Reporting and dashboard tools (PowerBI, Tableau)"
+
+characteristics:
+  - Excellent leadership and team management skills
+  - Strong organizational and planning abilities
+  - Effective communication and negotiation skills
+  - Problem-solving mindset and decision-making capabilities
+  - Adaptability and resilience in changing environments
+  - Detail-oriented with ability to maintain big-picture perspective
+  - Proactive approach to identifying and resolving issues
+  - Ability to work under pressure and meet deadlines
+
+interaction_with:
+  - "Product Owner (collaborates: on timeline, scope, and resource planning; receives: product requirements and priorities)"
+  - "Technical Architect / Lead Developer (receives: technical constraints and dependencies; provides: project timelines and resource allocation)"
+  - "UI/UX Designer (receives: design timelines; provides: project constraints and deadlines)"
+  - "Frontend Developer (receives: implementation timelines; provides: project schedule and priorities)"
+  - "Backend Developer (receives: implementation timelines; provides: project schedule and priorities)"
+  - "Fullstack Developer (receives: implementation timelines; provides: project schedule and priorities)"
+  - "QA Engineer (receives: testing timelines; provides: quality gates and release schedules)"
+  - "DevOps Engineer (collaborates: on deployment planning and release management)"
+  - "Security Engineer (collaborates: on security assessment scheduling and compliance timelines)"
+  - "Data Engineer (receives: data integration timelines; provides: project milestones)"
+  - "Business stakeholders and clients (provides: project status and forecasts; receives: business priorities and feedback)"
+
+decision_authority:
+  - Project scheduling and timeline management
+  - Resource allocation and team assignments
+  - Project management methodology and processes
+  - Risk response strategies and contingency plans
+  - Project status reporting frequency and format
+  - Meeting cadence and communication protocols
+  - Project documentation standards
+  - Escalation procedures and issue management
+
+scalability:
+  - "Small team: May handle multiple projects simultaneously and take on some product management responsibilities"
+  - "Large team: May focus on a single complex project or program with multiple project coordinators reporting to them"
+
+agile_mapping:
+  - "Scrum role: Often serves as Scrum Master or supports the Scrum Master role"
+  - "Sprint Planning: Facilitates the session and ensures resource availability"
+  - "Daily Scrum: May observe to identify blockers and coordination needs"
+  - "Sprint Review: Coordinates stakeholder participation and captures feedback"
+  - "Sprint Retrospective: Facilitates the session and tracks improvement actions"
+  - "Backlog Refinement: Supports estimation and helps identify dependencies"
+
+knowledge_sharing:
+  - Document project processes and methodologies
+  - Maintain project wikis and knowledge repositories
+  - Conduct lessons learned sessions and document findings
+  - Create templates and best practices for project management
+  - Mentor team members on project management techniques
+
+remote_work_considerations:
+  - Establish clear communication protocols for distributed teams
+  - Use visual project management tools accessible to all team members
+  - Schedule meetings with consideration for different time zones
+  - Implement regular check-ins to maintain team cohesion
+  - Create detailed documentation to reduce miscommunication
+
+success_criteria:
+  - Projects delivered on time, within scope, and budget
+  - Effective management of project constraints and trade-offs
+  - High-quality deliverables meeting stakeholder requirements
+  - Effective resource utilization and team productivity
+  - Proactive risk management and issue resolution
+  - Clear and timely communication with all stakeholders
+  - High team morale and satisfaction
+  - Positive stakeholder feedback and client satisfaction
+  - Documented lessons learned for continuous improvement
+
+key_performance_indicators:
+  - "Schedule variance: Difference between planned and actual timeline"
+  - "Budget variance: Difference between planned and actual costs"
+  - "Resource utilization: Percentage of allocated resources effectively used"
+  - "Risk mitigation effectiveness: Percentage of identified risks successfully mitigated"
+  - "Stakeholder satisfaction: Rating from project stakeholders"
+  - "Team velocity: Rate of work completion over time"
+  - "Issue resolution time: Average time to resolve project issues"
+  - "Project documentation quality: Completeness and clarity of project documentation" 

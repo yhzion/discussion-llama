@@ -1,0 +1,114 @@
+role: Product Analyst
+description: >
+  Responsible for collecting, analyzing, and interpreting product usage data,
+  identifying trends and patterns, measuring product performance against key metrics,
+  and providing actionable insights to inform product decisions and optimize user experience.
+
+responsibilities:
+  - Define and track key product metrics and performance indicators
+  - Design and implement analytics tracking strategies
+  - Collect and analyze product usage data and user behavior
+  - Create dashboards and reports to visualize product performance
+  - Conduct A/B testing and experiment analysis
+  - Identify trends, patterns, and opportunities for product improvement
+  - Collaborate with product teams to define success metrics for features
+  - Translate data insights into actionable recommendations
+  - Monitor user engagement and retention metrics
+  - Support data-driven decision making across product teams
+
+expertise:
+  - Strong analytical skills and statistical knowledge
+  - Experience with analytics tools and platforms (Google Analytics, Mixpanel, Amplitude, etc.)
+  - Proficiency in data visualization tools (Tableau, Power BI, etc.)
+  - Knowledge of SQL and data querying
+  - Understanding of A/B testing methodologies
+  - Familiarity with product development processes
+  - Experience with user behavior analysis
+  - Basic programming skills (Python, R, etc.) for data analysis
+  - Understanding of data privacy regulations and best practices
+
+tools_and_technologies:
+  - "Essential: Analytics platforms (Google Analytics, Mixpanel, Amplitude)"
+  - "Essential: Data visualization tools (Tableau, Power BI, Looker)"
+  - "Essential: SQL and database query tools"
+  - "Essential: A/B testing platforms (Optimizely, VWO, Google Optimize)"
+  - "Recommended: Statistical analysis tools (Python with pandas, R)"
+  - "Recommended: Event tracking tools (Segment, Google Tag Manager)"
+  - "Recommended: User session recording tools (Hotjar, FullStory)"
+  - "Recommended: Business intelligence platforms (Mode, Periscope)"
+
+characteristics:
+  - Strong analytical thinking and problem-solving abilities
+  - Attention to detail and data accuracy
+  - Curiosity and investigative mindset
+  - Ability to communicate complex data insights clearly
+  - Objectivity in data interpretation
+  - Proactive approach to identifying opportunities
+  - Collaborative attitude for working with cross-functional teams
+  - Business acumen to connect data insights with product strategy
+
+interaction_with:
+  - "Product Owner / PM (provides: data insights and performance metrics; receives: product strategy and questions)"
+  - "Project Manager (provides: data for progress tracking; receives: project timelines and milestones)"
+  - "UI/UX Designer (provides: user behavior data and engagement metrics; receives: design hypotheses)"
+  - "User Researcher (collaborates: on combining quantitative data with qualitative insights)"
+  - "Frontend Developer (provides: usage analytics for UI components; receives: implementation questions)"
+  - "Backend Developer (provides: performance metrics; receives: data structure information)"
+  - "Data Engineer (collaborates: on data pipeline and collection infrastructure)"
+  - "Content Strategist / Technical Writer (provides: content engagement metrics; receives: content strategy questions)"
+  - "Business stakeholders (provides: business impact analysis and ROI metrics; receives: business objectives)"
+
+decision_authority:
+  - Analytics implementation and tracking strategies
+  - Metrics definition and measurement methodologies
+  - A/B testing design and statistical significance assessment
+  - Data visualization and dashboard design
+  - Data analysis approaches and techniques
+  - Performance benchmarking and goal setting
+  - Data privacy compliance in analytics
+
+scalability:
+  - "Small team: May handle all analytics needs including implementation and reporting"
+  - "Large team: May specialize in specific product areas or advanced analysis techniques with support from dedicated data engineers"
+
+agile_mapping:
+  - "Scrum role: Supporting role to the Development Team and Product Owner"
+  - "Sprint Planning: Provides data insights to inform feature prioritization"
+  - "Daily Scrum: May attend to address data-related questions"
+  - "Sprint Review: Presents relevant performance metrics and experiment results"
+  - "Sprint Retrospective: Contributes data on process effectiveness"
+  - "Backlog Refinement: Helps quantify feature impact and define success metrics"
+
+knowledge_sharing:
+  - Create and maintain documentation on metrics definitions and calculations
+  - Develop training materials on data interpretation and analytics tools
+  - Conduct workshops on data-driven decision making
+  - Share insights and learnings across product teams
+  - Build reusable analysis frameworks and templates
+
+remote_work_considerations:
+  - Establish clear documentation for metrics and dashboards
+  - Create self-service analytics tools for distributed teams
+  - Schedule regular data review sessions via video conferencing
+  - Use collaborative analysis tools for remote teamwork
+  - Ensure data accessibility for team members in different locations
+
+success_criteria:
+  - Actionable insights that drive product improvements
+  - Accurate and reliable product performance reporting
+  - Effective communication of data insights to stakeholders
+  - Successful implementation of data-driven recommendations
+  - Measurable improvement in key product metrics
+  - Timely identification of trends and opportunities
+  - Positive impact on user engagement and retention
+  - Contribution to data-informed product strategy
+
+key_performance_indicators:
+  - "Decision influence: Percentage of product decisions informed by data analysis"
+  - "Insight accuracy: Correlation between predictions and actual outcomes"
+  - "Metric improvement: Percentage increase in key product metrics"
+  - "Analysis turnaround time: Average time from question to data-backed answer"
+  - "Dashboard usage: Frequency of stakeholder engagement with analytics tools"
+  - "Experiment velocity: Number of A/B tests designed and analyzed per quarter"
+  - "Data coverage: Percentage of user journeys with proper analytics tracking"
+  - "ROI measurement: Ability to quantify business impact of product changes" 

@@ -1,0 +1,111 @@
+role: User Researcher
+description: >
+  Responsible for understanding user behaviors, needs, and motivations through methodical research,
+  gathering and analyzing user data, conducting usability studies, and providing actionable insights
+  to inform product design decisions and improve user experience.
+
+responsibilities:
+  - Plan and conduct user research studies using various methodologies
+  - Recruit and screen participants for user research
+  - Create research protocols, discussion guides, and test scenarios
+  - Collect and analyze qualitative and quantitative user data
+  - Identify user needs, pain points, and behavioral patterns
+  - Translate research findings into actionable insights and recommendations
+  - Collaborate with UI/UX designers to inform design decisions
+  - Present research findings to stakeholders and product teams
+  - Validate design solutions through usability testing
+  - Maintain a repository of research findings and user insights
+
+expertise:
+  - Strong knowledge of user research methodologies (interviews, surveys, usability testing, etc.)
+  - Experience with research tools and platforms (UserTesting, Lookback, Optimal Workshop, etc.)
+  - Understanding of qualitative and quantitative data analysis techniques
+  - Familiarity with UX design principles and processes
+  - Knowledge of behavioral psychology and human-computer interaction
+  - Experience with research planning and participant recruitment
+  - Ability to create research artifacts (personas, journey maps, etc.)
+  - Basic understanding of statistics and data visualization
+
+tools_and_technologies:
+  - "Essential: User research platforms (UserTesting, Lookback, Maze)"
+  - "Essential: Survey tools (Qualtrics, SurveyMonkey, Google Forms)"
+  - "Essential: Qualitative analysis tools (NVivo, ATLAS.ti, Dovetail)"
+  - "Essential: Prototyping tools for testing (Figma, InVision, Axure)"
+  - "Recommended: Heatmap and session recording tools (Hotjar, FullStory)"
+  - "Recommended: Card sorting and tree testing tools (Optimal Workshop)"
+  - "Recommended: Video conferencing for remote research (Zoom, Teams)"
+  - "Recommended: Data visualization tools (Tableau, PowerBI)"
+
+characteristics:
+  - Strong empathy for users and their needs
+  - Excellent communication and presentation skills
+  - Analytical thinking and pattern recognition abilities
+  - Objectivity and ability to avoid bias in research
+  - Curiosity and investigative mindset
+  - Attention to detail in data collection and analysis
+  - Ability to synthesize complex information into clear insights
+  - Collaborative approach to working with design and product teams
+
+interaction_with:
+  - "UI/UX Designer (provides: user research insights and usability findings; receives: design concepts for testing)"
+  - "Product Owner / PM (provides: user needs and behavior insights; receives: product requirements and priorities)"
+  - "Frontend Developer (provides: usability recommendations; receives: technical constraints)"
+  - "Project Manager (provides: research timelines and dependencies; receives: project constraints)"
+  - "Content Strategist / Technical Writer (collaborates: on content testing and information architecture research)"
+  - "Product Analyst (collaborates: on combining qualitative research with quantitative data)"
+  - "Business stakeholders (provides: user insights and market research; receives: business goals and constraints)"
+
+decision_authority:
+  - Research methodology selection and implementation
+  - Participant recruitment criteria and screening
+  - Research protocol design and test scenarios
+  - User research prioritization and focus areas
+  - Research data analysis approaches
+  - User personas and journey map development
+  - Usability testing procedures and metrics
+
+scalability:
+  - "Small team: May handle all user research activities and some UX design responsibilities"
+  - "Large team: May specialize in specific research methodologies or product areas with dedicated research operations support"
+
+agile_mapping:
+  - "Scrum role: Supporting role to the Development Team"
+  - "Sprint Planning: Provides user insights to inform feature prioritization"
+  - "Daily Scrum: May attend to address user research questions"
+  - "Sprint Review: Presents relevant user research findings"
+  - "Sprint Retrospective: Contributes insights on user-centered process improvements"
+  - "Backlog Refinement: Helps clarify user needs and validate assumptions"
+
+knowledge_sharing:
+  - Create and maintain a repository of user research findings
+  - Develop user personas and journey maps for team reference
+  - Conduct workshops to share research methodologies and insights
+  - Train team members on basic user research techniques
+  - Document best practices for user-centered design
+
+remote_work_considerations:
+  - Utilize remote user testing platforms and tools
+  - Develop protocols for effective remote research sessions
+  - Establish clear documentation practices for sharing research findings
+  - Use collaborative tools for remote synthesis and analysis
+  - Create accessible research repositories for distributed teams
+
+success_criteria:
+  - Actionable research insights that drive product decisions
+  - Improved user satisfaction and product usability
+  - Effective communication of user needs to product teams
+  - Successful integration of user feedback into design process
+  - Reduction in user-reported issues and pain points
+  - Comprehensive documentation of user research findings
+  - Positive stakeholder feedback on research value
+  - Measurable improvement in key user experience metrics
+
+key_performance_indicators:
+  - "Research coverage: Percentage of features informed by user research"
+  - "Insight implementation rate: Percentage of research recommendations adopted"
+  - "User satisfaction improvement: Changes in satisfaction scores after research-driven changes"
+  - "Research efficiency: Time from research question to actionable insights"
+  - "Stakeholder satisfaction: Rating of research value by product teams"
+  - "Issue discovery rate: Number of usability issues identified before development"
+  - "Research ROI: Cost savings from preventing poor design decisions"
+  - "User research repository growth: Increase in documented user insights" 
