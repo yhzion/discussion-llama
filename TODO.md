@@ -62,7 +62,13 @@ Discussion-Llama Architecture:
 - [x][T] Add discussion termination conditions
   - [x][T] Consensus-based termination
   - [x][T] Time/round-based limits
-  - [ ][ ] Deadlock detection and resolution
+  - [x][T] Deadlock detection and resolution
+  - [x][T] Increase max turn limit to 10000 for extended discussions until consensus
+- [x][T] Implement hierarchical organization structure
+  - [x][T] Define superior-subordinate relationships between roles
+  - [x][T] Create agile communication patterns for discussions
+  - [x][T] Add respect for hierarchy in response generation
+  - [x][T] Implement decision escalation mechanisms
 
 ## 🧠 AI Integration
 
@@ -84,6 +90,7 @@ Discussion-Llama Architecture:
 - [ ][ ] Implement response diversity controls
 - [x][T] Create fallback mechanisms for low-quality responses
 - [ ][ ] Add self-correction capabilities
+- [ ][ ] Implement conversational style with shorter responses (natural dialogue)
 
 ## 🖥️ User Interface
 
@@ -241,3 +248,27 @@ Discussion-Llama Architecture:
 - [T] 호환 가능한 역할 세트 선택 테스트 (Selecting compatible role sets)
 - [T] 호환성 매트릭스 생성 테스트 (Creating compatibility matrices)
 - [T] 역할 호환성 검증 테스트 (Validating role compatibility)
+
+## 🌐 다국어 지원 (Multilingual Support)
+
+### 1️⃣ 한국어 지원 (Korean Language Support)
+- [x][T] LLM 클라이언트에 언어 감지 기능 추가 (Add language detection to LLM client)
+- [x][T] 한국어 프롬프트 템플릿 구현 (Implement Korean prompt templates)
+- [x][T] 한국어 합의 감지 알고리즘 개선 (Enhance consensus detection for Korean)
+- [x][T] 한국어 감정 분석 기능 추가 (Add Korean sentiment analysis)
+- [x][T] 명령줄 인터페이스에 언어 옵션 추가 (Add language option to CLI)
+- [x][T] 한국어 출력 메시지 지원 (Support Korean output messages)
+- [ ][ ] 한국어 역할 정의 추가 (Add Korean role definitions)
+  - [ ][ ] 한국어 역할 템플릿 생성 (Create Korean role template)
+  - [ ][ ] 주요 역할 한국어 번역 (Translate main roles to Korean)
+  - [ ][ ] 한국어 특화 역할 추가 (Add Korea-specific roles)
+  - [ ][ ] 역할 간 상호작용 한국어 정의 (Define role interactions in Korean)
+  - [ ][ ] 한국어 역할 테스트 (Test Korean roles in discussions)
+
+### 2️⃣ 기타 언어 지원 (Other Language Support)
+- [ ][ ] 중국어 지원 (Chinese language support)
+- [ ][ ] 일본어 지원 (Japanese language support)
+- [ ][ ] 스페인어 지원 (Spanish language support)
+- [ ][ ] 프랑스어 지원 (French language support)
+- [ ][ ] 독일어 지원 (German language support)
+- [ ][ ] 다국어 역할 정의 지원 (Multilingual role definitions)

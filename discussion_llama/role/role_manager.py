@@ -27,6 +27,12 @@ class Role:
         self.remote_work_considerations = role_data.get('remote_work_considerations', [])
         self.key_performance_indicators = role_data.get('key_performance_indicators', [])
         
+        # Hierarchical organization attributes
+        self.hierarchy_level = role_data.get('hierarchy_level', 0)  # 0 means no hierarchy
+        self.superior = role_data.get('superior', '')  # Name of the superior role
+        self.subordinates = role_data.get('subordinates', [])  # List of subordinate role names
+        self.escalation_threshold = role_data.get('escalation_threshold', 0.7)  # Threshold for decision escalation
+        
         # Additional data for runtime
         self._raw_data = role_data
     
@@ -61,13 +67,96 @@ class Role:
                 prompt += f"- {char}\n"
             prompt += "\n"
         
+        # Add hierarchical information if available
+        if self.hierarchy_level > 0:
+            prompt += f"Hierarchy Level: {self.hierarchy_level}\n"
+            
+            if self.superior:
+                prompt += f"Superior: {self.superior}\n"
+            
+            if self.subordinates:
+                prompt += "Subordinates:\n"
+                for sub in self.subordinates:
+                    prompt += f"- {sub}\n"
+            prompt += "\n"
+            
+            # Add guidance on hierarchical communication
+            if self.superior:
+                prompt += f"When addressing complex issues beyond your authority, consider escalating to your superior ({self.superior}).\n\n"
+            
+            if self.subordinates:
+                prompt += "As a leader, you should guide and support your subordinates while making final decisions within your authority.\n\n"
+        
         return prompt
     
     def to_dict(self) -> Dict[str, Any]:
         """
-        Convert the role object back to a dictionary.
+        Convert the role to a dictionary.
         """
-        return self._raw_data
+        return {
+            "role": self.role,
+            "description": self.description,
+            "hierarchy_level": self.hierarchy_level,
+            "superior": self.superior,
+            "subordinates": self.subordinates
+        }
+    
+    def is_superior_to(self, other_role: 'Role') -> bool:
+        """
+        Check if this role is superior to another role in the hierarchy.
+        
+        Args:
+            other_role: The role to compare with
+            
+        Returns:
+            bool: True if this role is superior to the other role
+        """
+        # Direct superior relationship
+        if other_role.role in self.subordinates:
+            return True
+        
+        # Check hierarchy level
+        if self.hierarchy_level > 0 and other_role.hierarchy_level > 0:
+            return self.hierarchy_level < other_role.hierarchy_level
+        
+        return False
+    
+    def is_subordinate_to(self, other_role: 'Role') -> bool:
+        """
+        Check if this role is subordinate to another role in the hierarchy.
+        
+        Args:
+            other_role: The role to compare with
+            
+        Returns:
+            bool: True if this role is subordinate to the other role
+        """
+        # Direct subordinate relationship
+        if self.superior == other_role.role:
+            return True
+        
+        # Check hierarchy level
+        if self.hierarchy_level > 0 and other_role.hierarchy_level > 0:
+            return self.hierarchy_level > other_role.hierarchy_level
+        
+        return False
+    
+    def should_escalate_to_superior(self, decision_importance: float) -> bool:
+        """
+        Determine if a decision should be escalated to a superior based on its importance.
+        
+        Args:
+            decision_importance: A value between 0 and 1 indicating the importance of the decision
+            
+        Returns:
+            bool: True if the decision should be escalated
+        """
+        # If no superior or at top level, no escalation needed
+        if not self.superior or self.hierarchy_level <= 1:
+            return False
+        
+        # If decision importance exceeds the escalation threshold, escalate
+        return decision_importance > self.escalation_threshold
 
 
 class RoleManager:
@@ -86,13 +175,19 @@ class RoleManager:
         if not os.path.exists(self.roles_dir):
             raise FileNotFoundError(f"Roles directory not found: {self.roles_dir}")
         
+        # Files to exclude from loading
+        excluded_files = ['role_template.yaml', 'role_template.yml', 'README.md', 'role_schema.json']
+        
         for filename in os.listdir(self.roles_dir):
-            if filename.endswith('.yaml') or filename.endswith('.yml'):
+            if (filename.endswith('.yaml') or filename.endswith('.yml')) and filename not in excluded_files:
                 file_path = os.path.join(self.roles_dir, filename)
                 try:
                     with open(file_path, 'r', encoding='utf-8') as file:
                         role_data = yaml.safe_load(file)
                         if role_data and 'role' in role_data:
+                            # Skip template roles with placeholder names
+                            if role_data['role'] == "[Role Name]":
+                                continue
                             role = Role(role_data)
                             self.roles[role.role] = role
                 except Exception as e:

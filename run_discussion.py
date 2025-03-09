@@ -26,6 +26,8 @@ def main():
     parser.add_argument("--timeout", type=int, default=30, help="Timeout for LLM requests in seconds")
     parser.add_argument("--output", help="Output file for discussion results (JSON)")
     parser.add_argument("--stream", action="store_true", help="Use streaming for response generation (enhanced_ollama only)")
+    parser.add_argument("--language", choices=["auto", "en", "ko"], default="auto", 
+                        help="Language for the discussion (auto, en, ko). Default is auto-detect.")
     args = parser.parse_args()
     
     # 역할 디렉토리 경로
@@ -57,10 +59,6 @@ def main():
         print("Error: No valid roles selected for discussion")
         sys.exit(1)
     
-    print(f"\n🚀 Starting discussion on topic: {args.topic}")
-    print(f"👥 Participants: {', '.join(role.role for role in selected_roles)}")
-    print("-" * 80)
-    
     # LLM 클라이언트 생성
     llm_kwargs = {"model": args.model}
     
@@ -73,6 +71,22 @@ def main():
         })
     
     llm_client = create_llm_client(args.llm_client, **llm_kwargs)
+    
+    # 언어 감지
+    if args.language == "auto":
+        detected_language = llm_client.detect_language(args.topic) if hasattr(llm_client, 'detect_language') else 'en'
+    else:
+        detected_language = args.language
+    
+    # 언어에 따른 메시지 출력
+    if detected_language == 'ko':
+        print(f"\n🚀 주제에 대한 토론을 시작합니다: {args.topic}")
+        print(f"👥 참가자: {', '.join(role.role for role in selected_roles)}")
+        print("-" * 80)
+    else:
+        print(f"\n🚀 Starting discussion on topic: {args.topic}")
+        print(f"👥 Participants: {', '.join(role.role for role in selected_roles)}")
+        print("-" * 80)
     
     # 합의 감지기 생성
     consensus_detector = ConsensusDetector(llm_client)
@@ -92,25 +106,46 @@ def main():
     result = engine.run_discussion()
     
     # 결과 표시
-    print("\n📝 Discussion Summary:")
-    print("-" * 80)
-    
-    for message in result["discussion"]:
-        print(f"[{message['role']}]: {message['content']}")
+    if detected_language == 'ko':
+        print("\n📝 토론 요약:")
         print("-" * 80)
-    
-    print(f"\n🏁 Discussion ended after {result['turns']} turns.")
-    if result["consensus_reached"]:
-        print("✅ Consensus was reached!")
+        
+        for message in result["discussion"]:
+            print(f"[{message['role']}]: {message['content']}")
+            print("-" * 80)
+        
+        print(f"\n🏁 토론이 {result['turns']}턴 후 종료되었습니다.")
+        if result["consensus_reached"]:
+            print("✅ 합의에 도달했습니다!")
+        else:
+            print("❌ 합의에 도달하지 못했습니다.")
+        
+        # 결과 저장
+        if args.output:
+            import json
+            with open(args.output, "w", encoding="utf-8") as f:
+                json.dump(result, f, ensure_ascii=False, indent=2)
+            print(f"\n💾 결과가 {args.output}에 저장되었습니다.")
     else:
-        print("❌ No consensus was reached.")
-    
-    # 결과 저장
-    if args.output:
-        import json
-        with open(args.output, "w", encoding="utf-8") as f:
-            json.dump(result, f, ensure_ascii=False, indent=2)
-        print(f"\n💾 Results saved to {args.output}")
+        print("\n📝 Discussion Summary:")
+        print("-" * 80)
+        
+        for message in result["discussion"]:
+            print(f"[{message['role']}]: {message['content']}")
+            print("-" * 80)
+        
+        print(f"\n🏁 Discussion ended after {result['turns']} turns.")
+        if result["consensus_reached"]:
+            print("✅ Consensus was reached!")
+        else:
+            print("❌ No consensus was reached.")
+        
+        # 결과 저장
+        if args.output:
+            import json
+            with open(args.output, "w", encoding="utf-8") as f:
+                json.dump(result, f, ensure_ascii=False, indent=2)
+            print(f"\n💾 Results saved to {args.output}")
 
 if __name__ == "__main__":
     main() 
