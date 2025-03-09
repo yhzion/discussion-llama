@@ -183,28 +183,18 @@ class RoleManager:
     
     def _calculate_role_relevance(self, role: Role, topic: str) -> float:
         """
-        Calculate the relevance of a role to a given topic.
+        Calculate how relevant a role is to a given topic.
         
         Args:
-            role: The role to calculate relevance for
+            role: The role to evaluate
             topic: The discussion topic
             
         Returns:
-            float: A relevance score between 0.0 and 1.0
+            A relevance score (higher is more relevant)
         """
-        # Convert topic to lowercase for case-insensitive matching
-        topic_lower = topic.lower()
-        
-        # Extract keywords from the topic
-        topic_keywords = set(re.findall(r'\b\w+\b', topic_lower))
-        
-        # Calculate relevance based on keyword matches in role attributes
+        # Simple keyword matching for now
+        topic_keywords = set(re.findall(r'\b\w+\b', topic.lower()))
         relevance_score = 0.0
-        
-        # Check role name
-        role_name_keywords = set(re.findall(r'\b\w+\b', role.role.lower()))
-        role_name_matches = len(topic_keywords.intersection(role_name_keywords))
-        relevance_score += role_name_matches * 0.2  # Higher weight for role name matches
         
         # Check role description
         description_keywords = set(re.findall(r'\b\w+\b', role.description.lower()))
@@ -214,20 +204,22 @@ class RoleManager:
         # Check expertise areas (highest weight)
         expertise_keywords = set()
         for expertise in role.expertise:
-            expertise_keywords.update(re.findall(r'\b\w+\b', expertise.lower()))
+            if isinstance(expertise, str):  # Make sure expertise is a string
+                expertise_keywords.update(re.findall(r'\b\w+\b', expertise.lower()))
         expertise_matches = len(topic_keywords.intersection(expertise_keywords))
         relevance_score += expertise_matches * 0.4  # Highest weight for expertise matches
         
         # Check responsibilities
         responsibility_keywords = set()
         for resp in role.responsibilities:
-            responsibility_keywords.update(re.findall(r'\b\w+\b', resp.lower()))
+            if isinstance(resp, str):  # Make sure responsibility is a string
+                responsibility_keywords.update(re.findall(r'\b\w+\b', resp.lower()))
         responsibility_matches = len(topic_keywords.intersection(responsibility_keywords))
         relevance_score += responsibility_matches * 0.3
         
         # Normalize the score to be between 0 and 1
         # The maximum possible score depends on the number of keywords in the topic
-        max_possible_score = len(topic_keywords) * (0.2 + 0.1 + 0.4 + 0.3)
+        max_possible_score = len(topic_keywords) * (0.1 + 0.4 + 0.3)
         if max_possible_score > 0:
             normalized_score = min(1.0, relevance_score / max_possible_score)
         else:

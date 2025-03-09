@@ -139,4 +139,114 @@
 
 ---
 
+## 🔹 프로그램 실행 방법 및 오류 해결
+
+### 프로그램 실행 방법
+
+1. **환경 설정**
+   ```bash
+   # 저장소 클론
+   git clone https://github.com/yourusername/discussion-llama.git
+   cd discussion-llama
+
+   # 가상 환경 생성 (권장)
+   python -m venv .venv
+   source .venv/bin/activate  # Windows: .venv\Scripts\activate
+
+   # 의존성 설치
+   pip install -r requirements.txt
+
+   # 개발 모드로 패키지 설치
+   pip install -e .
+   ```
+
+2. **run_discussion.py 스크립트 사용**
+   ```bash
+   # 기본 사용법
+   python run_discussion.py "토론 주제"
+
+   # 특정 역할 지정
+   python run_discussion.py "토론 주제" --roles "product_owner_pm,backend_developer,security_engineer"
+
+   # Ollama 사용 (실제 LLM 통합)
+   python run_discussion.py "토론 주제" --llm-client ollama --model llama2:7b-chat-q4_0
+
+   # 향상된 Ollama 클라이언트 사용 (스트리밍 지원)
+   python run_discussion.py "토론 주제" --llm-client enhanced_ollama --model llama2:7b-chat-q4_0 --stream
+
+   # 결과를 파일로 저장
+   python run_discussion.py "토론 주제" --output results.json
+   ```
+
+3. **명령줄 인터페이스 사용** (패키지 설치 후)
+   ```bash
+   # 기본 사용법
+   discussion-llama "토론 주제"
+
+   # 추가 옵션 사용
+   discussion-llama "토론 주제" --roles "product_owner_pm,backend_developer,security_engineer" --llm-client ollama
+   ```
+
+### 주요 명령줄 옵션
+
+| 옵션 | 설명 | 기본값 |
+|--------|-------------|---------|
+| `--roles` | 포함할 역할 이름 (쉼표로 구분) | 주제 기반 자동 선택 |
+| `--num-roles` | 포함할 역할 수 (지정되지 않은 경우) | 3 |
+| `--max-turns` | 최대 턴 수 | 10 |
+| `--llm-client` | 사용할 LLM 클라이언트 (mock, ollama, enhanced_ollama) | mock |
+| `--model` | 사용할 모델 (Ollama용) | llama2:7b-chat-q4_0 |
+| `--max-retries` | LLM 요청 최대 재시도 횟수 | 3 |
+| `--retry-delay` | LLM 요청 재시도 간 지연 시간 | 1.0 |
+| `--timeout` | LLM 요청 타임아웃 (초) | 30 |
+| `--output` | 토론 결과 저장 파일 (JSON) | None |
+| `--stream` | 응답 생성에 스트리밍 사용 (enhanced_ollama만 해당) | False |
+
+### Ollama 사용하기
+
+실제 언어 모델로 Discussion-Llama를 사용하려면 Ollama를 설치하고 실행해야 합니다:
+
+1. [ollama.ai](https://ollama.ai/)에서 Ollama 설치
+2. Ollama 서버 시작
+3. 사용할 모델 다운로드:
+   ```bash
+   ollama pull llama2:7b-chat-q4_0
+   ```
+4. Ollama 클라이언트로 Discussion-Llama 실행:
+   ```bash
+   python run_discussion.py "토론 주제" --llm-client ollama --model llama2:7b-chat-q4_0
+   ```
+
+### 오류 해결
+
+#### 1. AttributeError: 'list' object has no attribute 'lower'
+
+이 오류는 `role_manager.py` 파일의 `_calculate_role_relevance` 메서드에서 발생합니다. 역할의 expertise 필드가 문자열 리스트인데, 코드에서는 단일 문자열로 처리하려고 했기 때문입니다.
+
+**해결 방법**:
+`role_manager.py` 파일에서 expertise와 responsibilities를 처리하는 부분에 `isinstance(expertise, str)` 검사를 추가하여 문자열인 경우에만 `lower()` 메서드를 호출하도록 수정했습니다.
+
+```python
+# 수정 전
+for expertise in role.expertise:
+    expertise_keywords.update(re.findall(r'\b\w+\b', expertise.lower()))
+
+# 수정 후
+for expertise in role.expertise:
+    if isinstance(expertise, str):  # 문자열인지 확인
+        expertise_keywords.update(re.findall(r'\b\w+\b', expertise.lower()))
+```
+
+#### 2. 이전 토론 상태 로드 문제
+
+프로그램을 여러 번 실행하면 이전 토론 상태가 로드되어 새로운 토론이 제대로 시작되지 않을 수 있습니다.
+
+**해결 방법**:
+새로운 토론을 시작하기 전에 토론 상태 디렉토리를 비웁니다:
+```bash
+rm -rf discussion_state/* && python run_discussion.py "토론 주제" --llm-client enhanced_ollama --model llama2:7b-chat-q4_0
+```
+
+---
+
 다음 작업을 어떤 순서로 진행할지 말씀해 주시면 우선순위를 조정할 수 있도록 도와드리겠습니다. 😊
